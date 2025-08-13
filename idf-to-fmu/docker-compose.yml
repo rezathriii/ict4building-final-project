@@ -1,0 +1,18 @@
+services:
+  idf2fmu:
+    platform: linux/amd64
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./inputs:/app/inputs
+      - ./outputs:/app/outputs
+      - ./tools:/app/tools
+    environment:
+      - OPT_IDF_PATH=/app/inputs/optimized_office_building.idf
+      - NOT_OPT_IDF_PATH=/app/inputs/not_optimized_office_building.idf
+      - EPW_PATH=/app/inputs/paris_2005.epw
+      - IDD_PATH=/usr/local/EnergyPlus-24-1-0/Energy+.idd
+      - EP2FMU_PATH=/app/tools/EnergyPlusToFMU-v3.1.0/Scripts/EnergyPlusToFMU.py
+      - OUTPUT_PATH=/app/outputs
+#python $EP2FMU_PATH -i $IDD_PATH -w $EPW_PATH -a 2 $NOT_OPT_IDF_PATH

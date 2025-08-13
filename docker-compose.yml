@@ -1,0 +1,120 @@
+services:
+  vbms:
+    build:
+      context: ./vbms
+      dockerfile: Dockerfile
+    container_name: vbms-api
+    ports:
+      - "8000:8000"
+    depends_on:
+      mqtt:
+        condition: service_healthy
+      influxdb:
+        condition: service_healthy
+    environment:
+      - MQTT_HOST=mqtt
+      - INFLUXDB_HOST=influxdb
+      - PYTHONPATH=/app
+      - INFLUXDB_URL=http://influxdb:8086
+      - INFLUXDB_TOKEN=vbms-token
+      - INFLUXDB_ORG=vbms
+      - INFLUXDB_BUCKET=thermal_data
+      - MQTT_BROKER=mqtt
+      - MQTT_PORT=1883
+    volumes:
+      - ./vbms/fmu:/app/fmu:ro
+    networks:
+      - vbms-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  mqtt:
+    image: eclipse-mosquitto:2.0
+    container_name: vbms-mqtt
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+    volumes:
+      - ./config/mosquitto.conf:/mosquitto/config/mosquitto.conf
+      - mosquitto-data:/mosquitto/data
+      - mosquitto-logs:/mosquitto/log
+    networks:
+      - vbms-network
+    restart: unless-stopped
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "mosquitto_pub",
+          "-h",
+          "localhost",
+          "-t",
+          "health",
+          "-m",
+          "check",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  influxdb:
+    image: influxdb:2.7
+    container_name: vbms-influxdb
+    ports:
+      - "8086:8086"
+    environment:
+      - DOCKER_INFLUXDB_INIT_MODE=setup
+      - DOCKER_INFLUXDB_INIT_USERNAME=admin
+      - DOCKER_INFLUXDB_INIT_PASSWORD=vbms-password
+      - DOCKER_INFLUXDB_INIT_ORG=vbms
+      - DOCKER_INFLUXDB_INIT_BUCKET=thermal_data
+      - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=vbms-token
+    volumes:
+      - influxdb-storage:/var/lib/influxdb2
+      - influxdb-config:/etc/influxdb2
+    networks:
+      - vbms-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8086/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  grafana:
+    image: grafana/grafana:10.1.0
+    container_name: vbms-grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=vbms-admin
+      - GF_INSTALL_PLUGINS=
+    volumes:
+      - grafana-storage:/var/lib/grafana
+      - ./config/grafana/provisioning:/etc/grafana/provisioning
+      - ./config/grafana/dashboards:/var/lib/grafana/dashboards
+    depends_on:
+      - influxdb
+    networks:
+      - vbms-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:3000/api/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+volumes:
+  mosquitto-data:
+  mosquitto-logs:
+  influxdb-storage:
+  influxdb-config:
+  grafana-storage:
+
+networks:
+  vbms-network:
+    driver: bridge

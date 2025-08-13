@@ -1,0 +1,25 @@
+apiVersion: 1
+
+datasources:
+  # InfluxDB for VBMS thermal data
+  - name: InfluxDB-VBMS
+    type: influxdb
+    access: proxy
+    url: http://influxdb:8086
+    jsonData:
+      version: Flux
+      organization: vbms
+      defaultBucket: thermal_data
+      tlsSkipVerify: true
+    secureJsonData:
+      token: vbms-token
+    isDefault: true
+    editable: true
+
+  # VBMS API for additional metrics
+  - name: VBMS-API
+    type: prometheus
+    access: proxy
+    url: http://vbms-api:8000/metrics
+    isDefault: false
+    editable: true

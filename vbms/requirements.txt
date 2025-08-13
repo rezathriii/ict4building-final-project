@@ -1,0 +1,27 @@
+# Core dependencies first
+numpy==1.24.3
+Cython>=0.29.0
+
+# FastAPI and web framework
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0
+python-multipart==0.0.6
+aiofiles==23.2.0
+
+# Data and time series
+pandas==2.0.3
+influxdb-client==1.38.0
+
+# MQTT communication
+paho-mqtt==1.6.1
+
+# FMI simulation 
+FMPy==0.3.16
+
+# RL and ML
+gymnasium==0.29.1
+stable-baselines3==2.2.1
+
+# Utilities
+schedule==1.2.0

@@ -1,0 +1,162 @@
+idf-to-fmu/tools
+fast-simulation/outputs
+report
+
+
+# Directories and files to permanently exclude
+clean_project/
+idf2fmu/
+backup/
+vbms old/
+shared/
+*.log
+*.tmp
+.DS_Store
+__pycache__/
+.idea/
+.vscode/settings.json
+cleanup.sh
+confirm_cleanup.sh
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# macOS folder attributes
+Icon?
+._*
+
+# VS Code settings
+.vscode/
+
+# JetBrains IDEs (e.g., IntelliJ, PyCharm, WebStorm)
+.idea/
+*.iml
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.mypy_cache/
+.pytest_cache/
+.coverage
+*.cover
+*.pyc
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+*.log
+target/
+build/
+
+# C/C++
+*.o
+*.obj
+*.so
+*.dll
+*.exe
+*.out
+*.a
+*.lib
+*.dSYM/
+
+# Go
+bin/
+*.exe
+*.test
+*.out
+coverage.out
+
+# Ruby
+.bundle/
+vendor/bundle/
+*.gem
+*.rbc
+.sass-cache/
+.yardoc/
+_yardoc/
+coverage/
+InstalledFiles
+.byebug_history
+
+# PHP
+vendor/
+composer.lock
+
+# Logs
+*.log
+logs/
+*.pid
+
+# Thumbnails
+._.DS_Store
+
+# Trash
+.Trashes
+
+# Spotlight files
+.Spotlight-V100
+
+# Temporary files
+.TemporaryItems
+*.tmp
+*.swp
+*.swo
+*.bak
+*.old
+
+# Other system files
+.DocumentRevisions-V100
+.fseventsd
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Editor directories and files
+.idea/
+.project
+.classpath
+.settings/
+.metadata/
+
+# Environment files
+.env
+.env.*
+
+# Dependency directories
+bower_components/
+
+# Distribution files
+dist/
+build/
+out/
+
+# Coverage reports
+coverage/
+*.lcov
+*.lcov.info
+
+# Misc
+*.orig
+*.rej
+*.sublime-workspace
+*.sublime-project
