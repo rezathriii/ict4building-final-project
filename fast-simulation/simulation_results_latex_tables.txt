@@ -1,0 +1,69 @@
+% Energy Performance Comparison Table
+\begin{table}[H]
+\centering
+\caption{Annual Energy Consumption Comparison}
+\label{tab:energy_comparison}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Energy Category} & \textbf{Not Optimized (kWh)} & \textbf{Optimized (kWh)} & \textbf{Savings (\%)} \\
+\hline
+Heating & 29896 & 12069 & 59.6\% \\
+\hline
+Cooling & 6767 & 8043 & -18.9\% \\
+\hline
+HVAC & 36662 & 20112 & 45.1\% \\
+\hline
+Lighting & 4477 & 1349 & 69.9\% \\
+\hline
+Equipment & 23506 & 23428 & 0.3\% \\
+\hline
+Total Energy & 64646 & 44889 & 30.6\% \\
+\hline
+\end{tabular}
+\end{table}
+
+% Thermal Comfort Comparison Table
+\begin{table}[H]
+\centering
+\caption{Thermal Comfort Performance Comparison}
+\label{tab:comfort_comparison}
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Comfort Metric} & \textbf{Not Optimized} & \textbf{Optimized} \\
+\hline
+Average PMV & -0.975 & -1.417 \\
+\hline
+Average PPD (%) & 32.6 & 46.8 \\
+\hline
+PMV Standard Deviation & 0.752 & 0.669 \\
+\hline
+PPD Standard Deviation (%) & 25.1 & 25.8 \\
+\hline
+Comfort Hours (PMV ±0.5) & 11784 & 3030 \\
+\hline
+Comfort Percentage (\%) & 22.4 & 5.8 \\
+\hline
+\end{tabular}
+\end{table}
+
+% Zone Performance Summary Table
+\begin{table}[H]
+\centering
+\caption{Zone-wise Performance Summary (Top 5 Zones by Energy Savings)}
+\label{tab:zone_performance}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Zone} & \textbf{Avg Temp Not Opt (°C)} & \textbf{Avg Temp Opt (°C)} & \textbf{Heating Savings (\%)} & \textbf{Annual Savings (kWh)} \\
+\hline
+B2NW & 20.0 & 19.8 & 70.1\% & 3299 \\
+\hline
+B2NE & 20.0 & 19.8 & 70.1\% & 3299 \\
+\hline
+B2SE & 20.8 & 19.9 & 66.0\% & 2470 \\
+\hline
+B2SW & 20.8 & 19.9 & 66.0\% & 2470 \\
+\hline
+B2Corr & 20.6 & 19.9 & 64.7\% & 1226 \\
+\hline
+\end{tabular}
+\end{table}
