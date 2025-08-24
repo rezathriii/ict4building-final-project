@@ -1,0 +1,395 @@
+Program Version,EnergyPlus, Version 9.4.0-998c4b761e, YMD=2024.12.04 11:19
+! <Version>, Version ID
+ Version, 9.4.0.002
+! <Timesteps per Hour>, #TimeSteps, Minutes per TimeStep {minutes}
+ Timesteps per Hour,  6, 10
+! <System Convergence Limits>, Minimum System TimeStep {minutes}, Max HVAC Iterations, Minimum Plant Iterations, Maximum Plant Iterations
+ System Convergence Limits, 1, 25, 2, 8
+! <Simulation Control>, Do Zone Sizing, Do System Sizing, Do Plant Sizing, Do Design Days, Do Weather Simulation, Do HVAC Sizing Simulation
+ Simulation Control, Yes, Yes, No, No, Yes, No
+! <Performance Precision Tradeoffs>, Use Coil Direct Simulation, Zone Radiant Exchange Algorithm, Override Mode, Number of Timestep In Hour, Force Euler Method, Minimum Number of Warmup Days, Force Suppress All Begin Environment Resets, Minimum System Timestep, MaxZoneTempDiff, MaxAllowedDelTemp
+ Performance Precision Tradeoffs, No, ScriptF, Normal, 6, No, 1, No, 1.0, 0.300, 2.0000E-003
+! <Output Reporting Tolerances>, Tolerance for Time Heating Setpoint Not Met, Tolerance for Zone Cooling Setpoint Not Met Time
+ Output Reporting Tolerances, 1.110, 1.110, 
+! <Site:GroundTemperature:BuildingSurface>,Jan{C},Feb{C},Mar{C},Apr{C},May{C},Jun{C},Jul{C},Aug{C},Sep{C},Oct{C},Nov{C},Dec{C}
+ Site:GroundTemperature:BuildingSurface,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00
+! <Site:GroundTemperature:FCfactorMethod>,Jan{C},Feb{C},Mar{C},Apr{C},May{C},Jun{C},Jul{C},Aug{C},Sep{C},Oct{C},Nov{C},Dec{C}
+ Site:GroundTemperature:FCfactorMethod,   1.99,   1.11,   2.67,   5.12,  11.52,  16.46,  19.79,  20.81,  19.08,  15.24,  10.12,   5.36
+! <Site:GroundTemperature:Shallow>,Jan{C},Feb{C},Mar{C},Apr{C},May{C},Jun{C},Jul{C},Aug{C},Sep{C},Oct{C},Nov{C},Dec{C}
+ Site:GroundTemperature:Shallow,  14.00,  14.00,  14.00,  14.00,  14.00,  14.00,  14.00,  14.00,  14.00,  14.00,  14.00,  14.00
+! <Site:GroundTemperature:Deep>,Jan{C},Feb{C},Mar{C},Apr{C},May{C},Jun{C},Jul{C},Aug{C},Sep{C},Oct{C},Nov{C},Dec{C}
+ Site:GroundTemperature:Deep,  14.00,  14.00,  14.00,  14.00,  14.00,  14.00,  14.00,  14.00,  14.00,  14.00,  14.00,  14.00
+! <Site:GroundReflectance>,Jan{dimensionless},Feb{dimensionless},Mar{dimensionless},Apr{dimensionless},May{dimensionless},Jun{dimensionless},Jul{dimensionless},Aug{dimensionless},Sep{dimensionless},Oct{dimensionless},Nov{dimensionless},Dec{dimensionless}
+ Site:GroundReflectance,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20
+! <Site:GroundReflectance:SnowModifier>, Normal, Daylighting {dimensionless}
+ Site:GroundReflectance:SnowModifier,   2.000,   2.000
+! <Site:GroundReflectance:Snow>,Jan{dimensionless},Feb{dimensionless},Mar{dimensionless},Apr{dimensionless},May{dimensionless},Jun{dimensionless},Jul{dimensionless},Aug{dimensionless},Sep{dimensionless},Oct{dimensionless},Nov{dimensionless},Dec{dimensionless}
+ Site:GroundReflectance:Snow,  0.40,  0.40,  0.40,  0.40,  0.40,  0.40,  0.40,  0.40,  0.40,  0.40,  0.40,  0.40
+! <Site:GroundReflectance:Snow:Daylighting>,Jan{dimensionless},Feb{dimensionless},Mar{dimensionless},Apr{dimensionless},May{dimensionless},Jun{dimensionless},Jul{dimensionless},Aug{dimensionless},Sep{dimensionless},Oct{dimensionless},Nov{dimensionless},Dec{dimensionless}
+ Site:GroundReflectance:Snow:Daylighting,  0.40,  0.40,  0.40,  0.40,  0.40,  0.40,  0.40,  0.40,  0.40,  0.40,  0.40,  0.40
+! <Environment:Weather Station>,Wind Sensor Height Above Ground {m},Wind Speed Profile Exponent {},Wind Speed Profile Boundary Layer Thickness {m},Air Temperature Sensor Height Above Ground {m},Wind Speed Modifier Coefficient-Internal,Temperature Modifier Coefficient-Internal
+Environment:Weather Station,10.000,0.140,270.000,1.500,1.586,9.750E-003
+! <Site:Location>, Location Name, Latitude {N+/S- Deg}, Longitude {E+/W- Deg},  Time Zone Number {GMT+/-}, Elevation {m},  Standard Pressure at Elevation {Pa}, Standard RhoAir at Elevation
+Site:Location,PARIS FR - MN8 WMO#=0,48.86,2.35,1.00,38.00,100869,1.1989
+! <Site Water Mains Temperature Information>,Calculation Method{},Water Mains Temperature Schedule Name{},Annual Average Outdoor Air Temperature{C},Maximum Difference In Monthly Average Outdoor Air Temperatures{deltaC},Fixed Default Water Mains Temperature{C}
+Site Water Mains Temperature Information,FixedDefault,NA,NA,NA,10.0
+! <Building Information>, Building Name,North Axis {deg},Terrain,  Loads Convergence Tolerance Value,Temperature Convergence Tolerance Value,  Solar Distribution,Maximum Number of Warmup Days,Minimum Number of Warmup Days
+ Building Information,Building,0.000,Suburbs,4.00000E-002,0.40000,FullExterior,25,6
+! <Inside Convection Algorithm>, Algorithm {Simple | TARP | CeilingDiffuser | AdaptiveConvectionAlgorithm}
+Inside Convection Algorithm,TARP
+! <Outside Convection Algorithm>, Algorithm {SimpleCombined | TARP | MoWitt | DOE-2 | AdaptiveConvectionAlgorithm}
+Outside Convection Algorithm,DOE-2
+! <Sky Radiance Distribution>, Value {Anisotropic}
+Sky Radiance Distribution,Anisotropic
+! <Zone Air Solution Algorithm>, Value {ThirdOrderBackwardDifference | AnalyticalSolution | EulerMethod}
+ Zone Air Solution Algorithm, ThirdOrderBackwardDifference
+! <Zone Air Carbon Dioxide Balance Simulation>, Simulation {Yes/No}, Carbon Dioxide Concentration
+ Zone Air Carbon Dioxide Balance Simulation, Yes,YES
+! <Zone Air Generic Contaminant Balance Simulation>, Simulation {Yes/No}, Generic Contaminant Concentration
+ Zone Air Generic Contaminant Balance Simulation, Yes,YES
+! <Zone Air Mass Flow Balance Simulation>, Enforce Mass Balance, Adjust Zone Mixing, Adjust Zone Infiltration {AddInfiltration | AdjustInfiltration | None}, Infiltration Zones {MixingSourceZonesOnly | AllZones}
+ Zone Air Mass Flow Balance Simulation, No,N/A,N/A,N/A
+! <HVACSystemRootFindingAlgorithm>, Value {RegulaFalsi | Bisection | BisectionThenRegulaFalsi | RegulaFalsiThenBisection}
+ HVACSystemRootFindingAlgorithm, RegulaFalsi
+! <Environment:Site Atmospheric Variation>,Wind Speed Profile Exponent {},Wind Speed Profile Boundary Layer Thickness {m},Air Temperature Gradient Coefficient {K/m}
+Environment:Site Atmospheric Variation,0.220,370.000,6.500000E-003
+! <Surface Geometry>,Starting Corner,Vertex Input Direction,Coordinate System,Daylight Reference Point Coordinate System,Rectangular (Simple) Surface Coordinate System
+ Surface Geometry,LowerLeftCorner,Counterclockwise,RelativeCoordinateSystem,RelativeCoordinateSystem,RelativeToZoneOrigin
+! <Surface Heat Transfer Algorithm>, Value {CTF - ConductionTransferFunction | EMPD - MoisturePenetrationDepthConductionTransferFunction | CondFD - ConductionFiniteDifference | HAMT - CombinedHeatAndMoistureFiniteElement} - Description,Inside Surface Max Temperature Limit{C}, Surface Convection Coefficient Lower Limit {W/m2-K}, Surface Convection Coefficient Upper Limit {W/m2-K}
+Surface Heat Transfer Algorithm, CTF - ConductionTransferFunction,2000,1.00E-008,1000.0
+! <Shading Summary>, Number of Fixed Detached Shades, Number of Building Detached Shades, Number of Attached Shades
+ Shading Summary,0,16,0
+! <Zone Summary>, Number of Zones, Number of Zone Surfaces, Number of SubSurfaces
+ Zone Summary,10,88,24
+! <Zone Information>,Zone Name,North Axis {deg},Origin X-Coordinate {m},Origin Y-Coordinate {m},Origin Z-Coordinate {m},Centroid X-Coordinate {m},Centroid Y-Coordinate {m},Centroid Z-Coordinate {m},Type,Zone Multiplier,Zone List Multiplier,Minimum X {m},Maximum X {m},Minimum Y {m},Maximum Y {m},Minimum Z {m},Maximum Z {m},Ceiling Height {m},Volume {m3},Zone Inside Convection Algorithm {Simple-Detailed-CeilingDiffuser-TrombeWall},Zone Outside Convection Algorithm {Simple-Detailed-Tarp-MoWitt-DOE-2-BLAST}, Floor Area {m2},Exterior Gross Wall Area {m2},Exterior Net Wall Area {m2},Exterior Window Area {m2}, Number of Surfaces, Number of SubSurfaces, Number of Shading SubSurfaces,  Part of Total Building Area
+ Zone Information, BLOCK1:OFFICEXSWX1F,0.0,0.00,0.00,0.00,-4.98,-7.02,5.25,1,1,1,-8.98,-0.98,-11.02,-3.02,3.50,7.00,3.30,205.57,TARP,DOE-2,60.46,28.00,19.99,7.47,6,2,0,Yes
+ Zone Information, BLOCK1:OFFICEXSEX1F,0.0,0.00,0.00,0.00,3.02,-7.02,5.25,1,1,1,-0.98,7.02,-11.02,-3.02,3.50,7.00,3.30,205.57,TARP,DOE-2,60.46,28.00,19.99,7.47,6,2,0,Yes
+ Zone Information, BLOCK1:OFFICEXNWX1F,0.0,0.00,0.00,0.00,-4.98,2.98,5.25,1,1,1,-8.98,-0.98,-1.02,6.98,3.50,7.00,3.30,205.57,TARP,DOE-2,60.46,28.00,19.99,7.47,6,2,0,Yes
+ Zone Information, BLOCK1:OFFICEXNEX1F,0.0,0.00,0.00,0.00,3.02,2.98,5.25,1,1,1,-0.98,7.02,-1.02,6.98,3.50,7.00,3.30,205.57,TARP,DOE-2,60.46,28.00,19.99,7.47,6,2,0,Yes
+ Zone Information, BLOCK1:CORRIDORX1F,0.0,0.00,0.00,0.00,-0.98,-2.02,5.25,1,1,1,-8.98,7.02,-3.02,-1.02,3.50,7.00,3.18,99.70,TARP,DOE-2,29.32,0.00,0.00,0.00,8,4,0,Yes
+ Zone Information, BLOCK2:OFFICEXSWX2F,0.0,0.00,0.00,0.00,-4.98,-7.02,8.75,1,1,1,-8.98,-0.98,-11.02,-3.02,7.00,10.50,3.09,205.57,TARP,DOE-2,60.46,28.00,19.99,7.47,6,2,0,Yes
+ Zone Information, BLOCK2:OFFICEXSEX2F,0.0,0.00,0.00,0.00,3.02,-7.02,8.75,1,1,1,-0.98,7.02,-11.02,-3.02,7.00,10.50,3.09,205.57,TARP,DOE-2,60.46,28.00,19.99,7.47,6,2,0,Yes
+ Zone Information, BLOCK2:OFFICEXNWX2F,0.0,0.00,0.00,0.00,-4.98,2.98,8.75,1,1,1,-8.98,-0.98,-1.02,6.98,7.00,10.50,3.09,205.57,TARP,DOE-2,60.46,28.00,19.99,7.47,6,2,0,Yes
+ Zone Information, BLOCK2:OFFICEXNEX2F,0.0,0.00,0.00,0.00,3.02,2.98,8.75,1,1,1,-0.98,7.02,-1.02,6.98,7.00,10.50,3.09,205.57,TARP,DOE-2,60.46,28.00,19.99,7.47,6,2,0,Yes
+ Zone Information, BLOCK2:CORRIDORX2F,0.0,0.00,0.00,0.00,-0.98,-2.02,8.75,1,1,1,-8.98,7.02,-3.02,-1.02,7.00,10.50,2.86,99.70,TARP,DOE-2,29.32,0.00,0.00,0.00,8,4,0,Yes
+! <Zone Internal Gains Nominal>,Zone Name, Floor Area {m2},# Occupants,Area per Occupant {m2/person},Occupant per Area {person/m2},Interior Lighting {W/m2},Electric Load {W/m2},Gas Load {W/m2},Other Load {W/m2},Hot Water Eq {W/m2},Steam Equipment {W/m2},Sum Loads per Area {W/m2},Outdoor Controlled Baseboard Heat
+ Zone Internal Gains Nominal, BLOCK1:OFFICEXSWX1F,60.46,3.6,17.007,5.880E-002,7.500,0.000,0.000,11.770,0.000,0.000,19.270,No
+ Zone Internal Gains Nominal, BLOCK1:OFFICEXSEX1F,60.46,3.6,17.007,5.880E-002,7.500,0.000,0.000,11.770,0.000,0.000,19.270,No
+ Zone Internal Gains Nominal, BLOCK1:OFFICEXNWX1F,60.46,3.6,17.007,5.880E-002,7.500,0.000,0.000,11.770,0.000,0.000,19.270,No
+ Zone Internal Gains Nominal, BLOCK1:OFFICEXNEX1F,60.46,3.6,17.007,5.880E-002,7.500,0.000,0.000,11.770,0.000,0.000,19.270,No
+ Zone Internal Gains Nominal, BLOCK1:CORRIDORX1F,29.32,1.7,17.007,5.880E-002,7.500,0.000,0.000,11.770,0.000,0.000,19.270,No
+ Zone Internal Gains Nominal, BLOCK2:OFFICEXSWX2F,60.46,3.6,17.007,5.880E-002,7.500,0.000,0.000,11.770,0.000,0.000,19.270,No
+ Zone Internal Gains Nominal, BLOCK2:OFFICEXSEX2F,60.46,3.6,17.007,5.880E-002,7.500,0.000,0.000,11.770,0.000,0.000,19.270,No
+ Zone Internal Gains Nominal, BLOCK2:OFFICEXNWX2F,60.46,3.6,17.007,5.880E-002,7.500,0.000,0.000,11.770,0.000,0.000,19.270,No
+ Zone Internal Gains Nominal, BLOCK2:OFFICEXNEX2F,60.46,3.6,17.007,5.880E-002,7.500,0.000,0.000,11.770,0.000,0.000,19.270,No
+ Zone Internal Gains Nominal, BLOCK2:CORRIDORX2F,29.32,1.7,17.007,5.880E-002,7.500,0.000,0.000,11.770,0.000,0.000,19.270,No
+! <People Internal Gains Nominal>,Name,Schedule Name,Zone Name,Zone Floor Area {m2},# Zone Occupants,Number of People {},People/Floor Area {person/m2},Floor Area per person {m2/person},Fraction Radiant,Fraction Convected,Sensible Fraction Calculation,Activity level,ASHRAE 55 Warnings,Carbon Dioxide Generation Rate,Nominal Minimum Number of People,Nominal Maximum Number of People,MRT Calculation Type,Work Efficiency, Clothing Insulation Calculation Method,Clothing Insulation Calculation Method Schedule,Clothing,Air Velocity,Fanger Calculation,Pierce Calculation,KSU Calculation
+ People Internal Gains Nominal, PEOPLE BLOCK1:OFFICEXSWX1F,16798-1_OPENOFF_OCC,BLOCK1:OFFICEXSWX1F,60.46,3.6,3.6,5.880E-002,17.007,0.300,0.700,AutoCalculate,ACTIVITY SCHEDULE 285,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING SCHEDULE 285,DEFAULT AIR VELOCITY FOR COMFORT CALCULATIONS,Yes,No,No
+ People Internal Gains Nominal, PEOPLE BLOCK1:OFFICEXSEX1F,16798-1_OPENOFF_OCC,BLOCK1:OFFICEXSEX1F,60.46,3.6,3.6,5.880E-002,17.007,0.300,0.700,AutoCalculate,ACTIVITY SCHEDULE 292,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING SCHEDULE 292,DEFAULT AIR VELOCITY FOR COMFORT CALCULATIONS,Yes,No,No
+ People Internal Gains Nominal, PEOPLE BLOCK1:OFFICEXNWX1F,16798-1_OPENOFF_OCC,BLOCK1:OFFICEXNWX1F,60.46,3.6,3.6,5.880E-002,17.007,0.300,0.700,AutoCalculate,ACTIVITY SCHEDULE 299,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING SCHEDULE 299,DEFAULT AIR VELOCITY FOR COMFORT CALCULATIONS,Yes,No,No
+ People Internal Gains Nominal, PEOPLE BLOCK1:OFFICEXNEX1F,16798-1_OPENOFF_OCC,BLOCK1:OFFICEXNEX1F,60.46,3.6,3.6,5.880E-002,17.007,0.300,0.700,AutoCalculate,ACTIVITY SCHEDULE 306,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING SCHEDULE 306,DEFAULT AIR VELOCITY FOR COMFORT CALCULATIONS,Yes,No,No
+ People Internal Gains Nominal, PEOPLE BLOCK1:CORRIDORX1F,16798-1_OPENOFF_OCC,BLOCK1:CORRIDORX1F,29.32,1.7,1.7,5.880E-002,17.007,0.300,0.700,AutoCalculate,ACTIVITY SCHEDULE 313,No,3.8200E-008,0,1,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING SCHEDULE 313,DEFAULT AIR VELOCITY FOR COMFORT CALCULATIONS,Yes,No,No
+ People Internal Gains Nominal, PEOPLE BLOCK2:OFFICEXSWX2F,16798-1_OPENOFF_OCC,BLOCK2:OFFICEXSWX2F,60.46,3.6,3.6,5.880E-002,17.007,0.300,0.700,AutoCalculate,ACTIVITY SCHEDULE 337,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING SCHEDULE 337,DEFAULT AIR VELOCITY FOR COMFORT CALCULATIONS,Yes,No,No
+ People Internal Gains Nominal, PEOPLE BLOCK2:OFFICEXSEX2F,16798-1_OPENOFF_OCC,BLOCK2:OFFICEXSEX2F,60.46,3.6,3.6,5.880E-002,17.007,0.300,0.700,AutoCalculate,ACTIVITY SCHEDULE 344,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING SCHEDULE 344,DEFAULT AIR VELOCITY FOR COMFORT CALCULATIONS,Yes,No,No
+ People Internal Gains Nominal, PEOPLE BLOCK2:OFFICEXNWX2F,16798-1_OPENOFF_OCC,BLOCK2:OFFICEXNWX2F,60.46,3.6,3.6,5.880E-002,17.007,0.300,0.700,AutoCalculate,ACTIVITY SCHEDULE 351,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING SCHEDULE 351,DEFAULT AIR VELOCITY FOR COMFORT CALCULATIONS,Yes,No,No
+ People Internal Gains Nominal, PEOPLE BLOCK2:OFFICEXNEX2F,16798-1_OPENOFF_OCC,BLOCK2:OFFICEXNEX2F,60.46,3.6,3.6,5.880E-002,17.007,0.300,0.700,AutoCalculate,ACTIVITY SCHEDULE 358,No,3.8200E-008,0,2,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING SCHEDULE 358,DEFAULT AIR VELOCITY FOR COMFORT CALCULATIONS,Yes,No,No
+ People Internal Gains Nominal, PEOPLE BLOCK2:CORRIDORX2F,16798-1_OPENOFF_OCC,BLOCK2:CORRIDORX2F,29.32,1.7,1.7,5.880E-002,17.007,0.300,0.700,AutoCalculate,ACTIVITY SCHEDULE 365,No,3.8200E-008,0,1,Zone Averaged,WORK EFFICIENCY,Clothing Insulation Schedule,N/A,CLOTHING SCHEDULE 365,DEFAULT AIR VELOCITY FOR COMFORT CALCULATIONS,Yes,No,No
+! <Lights Internal Gains Nominal>,Name,Schedule Name,Zone Name,Zone Floor Area {m2},# Zone Occupants,Lighting Level {W},Lights/Floor Area {W/m2},Lights per person {W/person},Fraction Return Air,Fraction Radiant,Fraction Short Wave,Fraction Convected,Fraction Replaceable,End-Use Category,Nominal Minimum Lighting Level {W},Nominal Maximum Lighting Level {W}
+ Lights Internal Gains Nominal, BLOCK1:OFFICEXSWX1F GENERAL LIGHTING,16798-1_ACTIVATIONOCC,BLOCK1:OFFICEXSWX1F,60.46,3.6,453.455,7.500,127.551,0.000,0.420,0.180,0.400,1.000,ELECTRIC EQUIPMENT#Block1:OfficeXSWX1f#GeneralLights,0.000,453.455
+ Lights Internal Gains Nominal, BLOCK1:OFFICEXSEX1F GENERAL LIGHTING,16798-1_ACTIVATIONOCC,BLOCK1:OFFICEXSEX1F,60.46,3.6,453.455,7.500,127.551,0.000,0.420,0.180,0.400,1.000,ELECTRIC EQUIPMENT#Block1:OfficeXSEX1f#GeneralLights,0.000,453.455
+ Lights Internal Gains Nominal, BLOCK1:OFFICEXNWX1F GENERAL LIGHTING,16798-1_ACTIVATIONOCC,BLOCK1:OFFICEXNWX1F,60.46,3.6,453.455,7.500,127.551,0.000,0.420,0.180,0.400,1.000,ELECTRIC EQUIPMENT#Block1:OfficeXNWX1f#GeneralLights,0.000,453.455
+ Lights Internal Gains Nominal, BLOCK1:OFFICEXNEX1F GENERAL LIGHTING,16798-1_ACTIVATIONOCC,BLOCK1:OFFICEXNEX1F,60.46,3.6,453.455,7.500,127.551,0.000,0.420,0.180,0.400,1.000,ELECTRIC EQUIPMENT#Block1:OfficeXNEX1f#GeneralLights,0.000,453.455
+ Lights Internal Gains Nominal, BLOCK1:CORRIDORX1F GENERAL LIGHTING,16798-1_ACTIVATIONOCC,BLOCK1:CORRIDORX1F,29.32,1.7,219.919,7.500,127.551,0.000,0.420,0.180,0.400,1.000,ELECTRIC EQUIPMENT#Block1:CorridorX1f#GeneralLights,0.000,219.919
+ Lights Internal Gains Nominal, BLOCK2:OFFICEXSWX2F GENERAL LIGHTING,16798-1_ACTIVATIONOCC,BLOCK2:OFFICEXSWX2F,60.46,3.6,453.455,7.500,127.551,0.000,0.420,0.180,0.400,1.000,ELECTRIC EQUIPMENT#Block2:OfficeXSWX2f#GeneralLights,0.000,453.455
+ Lights Internal Gains Nominal, BLOCK2:OFFICEXSEX2F GENERAL LIGHTING,16798-1_ACTIVATIONOCC,BLOCK2:OFFICEXSEX2F,60.46,3.6,453.455,7.500,127.551,0.000,0.420,0.180,0.400,1.000,ELECTRIC EQUIPMENT#Block2:OfficeXSEX2f#GeneralLights,0.000,453.455
+ Lights Internal Gains Nominal, BLOCK2:OFFICEXNWX2F GENERAL LIGHTING,16798-1_ACTIVATIONOCC,BLOCK2:OFFICEXNWX2F,60.46,3.6,453.455,7.500,127.551,0.000,0.420,0.180,0.400,1.000,ELECTRIC EQUIPMENT#Block2:OfficeXNWX2f#GeneralLights,0.000,453.455
+ Lights Internal Gains Nominal, BLOCK2:OFFICEXNEX2F GENERAL LIGHTING,16798-1_ACTIVATIONOCC,BLOCK2:OFFICEXNEX2F,60.46,3.6,453.455,7.500,127.551,0.000,0.420,0.180,0.400,1.000,ELECTRIC EQUIPMENT#Block2:OfficeXNEX2f#GeneralLights,0.000,453.455
+ Lights Internal Gains Nominal, BLOCK2:CORRIDORX2F GENERAL LIGHTING,16798-1_ACTIVATIONOCC,BLOCK2:CORRIDORX2F,29.32,1.7,219.919,7.500,127.551,0.000,0.420,0.180,0.400,1.000,ELECTRIC EQUIPMENT#Block2:CorridorX2f#GeneralLights,0.000,219.919
+! <OtherEquipment Internal Gains Nominal>,Name,Schedule Name,Zone Name,Zone Floor Area {m2},# Zone Occupants,Equipment Level {W},Equipment/Floor Area {W/m2},Equipment per person {W/person},Fraction Latent,Fraction Radiant,Fraction Lost,Fraction Convected,Nominal Minimum Equipment Level {W},Nominal Maximum Equipment Level {W}
+ OtherEquipment Internal Gains Nominal, BLOCK1:OFFICEXSWX1F EQUIPMENT GAIN,OFFICE_OPENOFF_EQUIP,BLOCK1:OFFICEXSWX1F,60.46,3.6,711.622,11.770,200.170,0.000,0.200,0.000,0.800,0.000,711.622
+ OtherEquipment Internal Gains Nominal, BLOCK1:OFFICEXSEX1F EQUIPMENT GAIN,OFFICE_OPENOFF_EQUIP,BLOCK1:OFFICEXSEX1F,60.46,3.6,711.622,11.770,200.170,0.000,0.200,0.000,0.800,0.000,711.622
+ OtherEquipment Internal Gains Nominal, BLOCK1:OFFICEXNWX1F EQUIPMENT GAIN,OFFICE_OPENOFF_EQUIP,BLOCK1:OFFICEXNWX1F,60.46,3.6,711.622,11.770,200.170,0.000,0.200,0.000,0.800,0.000,711.622
+ OtherEquipment Internal Gains Nominal, BLOCK1:OFFICEXNEX1F EQUIPMENT GAIN,OFFICE_OPENOFF_EQUIP,BLOCK1:OFFICEXNEX1F,60.46,3.6,711.622,11.770,200.170,0.000,0.200,0.000,0.800,0.000,711.622
+ OtherEquipment Internal Gains Nominal, BLOCK1:CORRIDORX1F EQUIPMENT GAIN,OFFICE_OPENOFF_EQUIP,BLOCK1:CORRIDORX1F,29.32,1.7,345.126,11.770,200.170,0.000,0.200,0.000,0.800,0.000,345.126
+ OtherEquipment Internal Gains Nominal, BLOCK2:OFFICEXSWX2F EQUIPMENT GAIN,OFFICE_OPENOFF_EQUIP,BLOCK2:OFFICEXSWX2F,60.46,3.6,711.622,11.770,200.170,0.000,0.200,0.000,0.800,0.000,711.622
+ OtherEquipment Internal Gains Nominal, BLOCK2:OFFICEXSEX2F EQUIPMENT GAIN,OFFICE_OPENOFF_EQUIP,BLOCK2:OFFICEXSEX2F,60.46,3.6,711.622,11.770,200.170,0.000,0.200,0.000,0.800,0.000,711.622
+ OtherEquipment Internal Gains Nominal, BLOCK2:OFFICEXNWX2F EQUIPMENT GAIN,OFFICE_OPENOFF_EQUIP,BLOCK2:OFFICEXNWX2F,60.46,3.6,711.622,11.770,200.170,0.000,0.200,0.000,0.800,0.000,711.622
+ OtherEquipment Internal Gains Nominal, BLOCK2:OFFICEXNEX2F EQUIPMENT GAIN,OFFICE_OPENOFF_EQUIP,BLOCK2:OFFICEXNEX2F,60.46,3.6,711.622,11.770,200.170,0.000,0.200,0.000,0.800,0.000,711.622
+ OtherEquipment Internal Gains Nominal, BLOCK2:CORRIDORX2F EQUIPMENT GAIN,OFFICE_OPENOFF_EQUIP,BLOCK2:CORRIDORX2F,29.32,1.7,345.126,11.770,200.170,0.000,0.200,0.000,0.800,0.000,345.126
+! <Solar View Factor Check Values>,Zone/Enclosure Name,Original Check Value,Calculated Fixed Check Value,Final Check Value,Number of Iterations,Fixed RowSum Convergence,Used RowSum Convergence
+Solar View Factor Check Values,BLOCK1:OFFICEXSWX1F,4.440892E-015,8.749506E-004,8.749506E-004,12,8.749506E-004,8.749506E-004
+Solar View Factor Check Values,BLOCK1:OFFICEXSEX1F,3.552714E-015,8.749506E-004,8.749506E-004,12,8.749506E-004,8.749506E-004
+Solar View Factor Check Values,BLOCK1:OFFICEXNWX1F,5.329071E-015,8.749506E-004,8.749506E-004,12,8.749506E-004,8.749506E-004
+Solar View Factor Check Values,BLOCK1:OFFICEXNEX1F,3.552714E-015,8.749506E-004,8.749506E-004,12,8.749506E-004,8.749506E-004
+Solar View Factor Check Values,BLOCK1:CORRIDORX1F,7.105427E-015,6.747398E-004,6.747398E-004,12,6.747398E-004,6.747398E-004
+Solar View Factor Check Values,BLOCK2:OFFICEXSWX2F,3.552714E-015,8.749506E-004,8.749506E-004,12,8.749506E-004,8.749506E-004
+Solar View Factor Check Values,BLOCK2:OFFICEXSEX2F,3.552714E-015,8.749506E-004,8.749506E-004,12,8.749506E-004,8.749506E-004
+Solar View Factor Check Values,BLOCK2:OFFICEXNWX2F,3.552714E-015,8.749506E-004,8.749506E-004,12,8.749506E-004,8.749506E-004
+Solar View Factor Check Values,BLOCK2:OFFICEXNEX2F,3.552714E-015,8.749506E-004,8.749506E-004,12,8.749506E-004,8.749506E-004
+Solar View Factor Check Values,BLOCK2:CORRIDORX2F,8.881784E-015,6.747398E-004,6.747398E-004,12,6.747398E-004,6.747398E-004
+! <Construction CTF>,Construction Name,Index,#Layers,#CTFs,Time Step {hours},ThermalConductance {w/m2-K},OuterThermalAbsorptance,InnerThermalAbsorptance,OuterSolarAbsorptance,InnerSolarAbsorptance,Roughness
+! <Material CTF Summary>,Material Name,Thickness {m},Conductivity {w/m-K},Density {kg/m3},Specific Heat {J/kg-K},ThermalResistance {m2-K/w}
+! <Material:Air>,Material Name,ThermalResistance {m2-K/w}
+! <CTF>,Time,Outside,Cross,Inside,Flux (except final one)
+ Construction CTF,PROJECT INTERNAL FLOOR,   3,   1,   5,   0.167,      14.00    ,   0.900,   0.900,   0.600,   0.600,Rough
+ Material CTF Summary,CAST CONCRETE (DENSE)_.1,  0.1000,         1.400,   2100.000,      840.000,  0.7143E-01
+ CTF,   5,     -0.92687659E-04,      0.31556581E-05,     -0.92687659E-04,      0.35287821E-06
+ CTF,   4,      0.42896147E-01,      0.31940153E-02,      0.42896147E-01,     -0.19529177E-03
+ CTF,   3,      -2.6783647    ,      0.19851693    ,      -2.6783647    ,      0.16273406E-01
+ CTF,   2,       29.286491    ,       1.4620364    ,       29.286491    ,     -0.25361770    
+ CTF,   1,      -79.851174    ,       1.4676897    ,      -79.851174    ,       1.0052789    
+ CTF,   0,       56.451889    ,      0.12020458    ,       56.451889    
+ Construction CTF,PROJECT INTERNAL FLOOR_REVERSED,   5,   1,   5,   0.167,      14.00    ,   0.900,   0.900,   0.600,   0.600,Rough
+ Material CTF Summary,CAST CONCRETE (DENSE)_.1,  0.1000,         1.400,   2100.000,      840.000,  0.7143E-01
+ CTF,   5,     -0.92687659E-04,      0.31556581E-05,     -0.92687659E-04,      0.35287821E-06
+ CTF,   4,      0.42896147E-01,      0.31940153E-02,      0.42896147E-01,     -0.19529177E-03
+ CTF,   3,      -2.6783647    ,      0.19851693    ,      -2.6783647    ,      0.16273406E-01
+ CTF,   2,       29.286491    ,       1.4620364    ,       29.286491    ,     -0.25361770    
+ CTF,   1,      -79.851174    ,       1.4676897    ,      -79.851174    ,       1.0052789    
+ CTF,   0,       56.451889    ,      0.12020458    ,       56.451889    
+ Construction CTF,PROJECT INTERNAL FLOOR_REVERSED_REV,   6,   1,   5,   0.167,      14.00    ,   0.900,   0.900,   0.600,   0.600,Rough
+ Material CTF Summary,CAST CONCRETE (DENSE)_.1,  0.1000,         1.400,   2100.000,      840.000,  0.7143E-01
+ CTF,   5,     -0.92687659E-04,      0.31556581E-05,     -0.92687659E-04,      0.35287821E-06
+ CTF,   4,      0.42896147E-01,      0.31940153E-02,      0.42896147E-01,     -0.19529177E-03
+ CTF,   3,      -2.6783647    ,      0.19851693    ,      -2.6783647    ,      0.16273406E-01
+ CTF,   2,       29.286491    ,       1.4620364    ,       29.286491    ,     -0.25361770    
+ CTF,   1,      -79.851174    ,       1.4676897    ,      -79.851174    ,       1.0052789    
+ CTF,   0,       56.451889    ,      0.12020458    ,       56.451889    
+ Construction CTF,PROJECT PARTITION,   7,   3,   6,   0.167,      2.857    ,   0.900,   0.900,   0.500,   0.500,Rough
+ Material CTF Summary,GYPSUM PLASTERBOARD_.025,  0.0250,         0.250,    900.000,     1000.000,  0.1000    
+ Material CTF Summary,5_RVAL_2,  0.0000,         0.000,      0.000,        0.000,  0.1500    
+ Material CTF Summary,GYPSUM PLASTERBOARD_.025,  0.0250,         0.250,    900.000,     1000.000,  0.1000    
+ CTF,   6,      0.15270800E-10,      0.24002347E-11,      0.15270799E-10,      0.79256753E-16
+ CTF,   5,     -0.36318106E-05,      0.24222966E-06,     -0.36318106E-05,      0.23374625E-10
+ CTF,   4,      0.47194835E-02,      0.50285254E-03,      0.47194835E-02,     -0.31301117E-05
+ CTF,   3,     -0.90452582    ,      0.52957033E-01,     -0.90452582    ,      0.14917958E-02
+ CTF,   2,       10.824303    ,      0.45252512    ,       10.824303    ,     -0.16775603    
+ CTF,   1,      -29.765599    ,      0.40935750    ,      -29.765599    ,      0.83861398    
+ CTF,   0,       20.777258    ,      0.20809760E-01,       20.777258    
+ Construction CTF,PROJECT PARTITION_REV,   8,   3,   6,   0.167,      2.857    ,   0.900,   0.900,   0.500,   0.500,Rough
+ Material CTF Summary,GYPSUM PLASTERBOARD_.025,  0.0250,         0.250,    900.000,     1000.000,  0.1000    
+ Material CTF Summary,6_RVAL_2,  0.0000,         0.000,      0.000,        0.000,  0.1500    
+ Material CTF Summary,GYPSUM PLASTERBOARD_.025,  0.0250,         0.250,    900.000,     1000.000,  0.1000    
+ CTF,   6,      0.15270800E-10,      0.24002347E-11,      0.15270799E-10,      0.79256753E-16
+ CTF,   5,     -0.36318106E-05,      0.24222966E-06,     -0.36318106E-05,      0.23374625E-10
+ CTF,   4,      0.47194835E-02,      0.50285254E-03,      0.47194835E-02,     -0.31301117E-05
+ CTF,   3,     -0.90452582    ,      0.52957033E-01,     -0.90452582    ,      0.14917958E-02
+ CTF,   2,       10.824303    ,      0.45252512    ,       10.824303    ,     -0.16775603    
+ CTF,   1,      -29.765599    ,      0.40935750    ,      -29.765599    ,      0.83861398    
+ CTF,   0,       20.777258    ,      0.20809760E-01,       20.777258    
+ Construction CTF,PROJECT INTERNAL DOOR,   9,   1,   5,   0.167,      5.429    ,   0.900,   0.900,   0.500,   0.500,Rough
+ Material CTF Summary,PAINTED OAK_.035,  0.0350,         0.190,    700.000,     2390.000,  0.1842    
+ CTF,   5,     -0.44788911E-05,      0.35521661E-06,     -0.44788911E-05,      0.29024899E-07
+ CTF,   4,      0.49759283E-02,      0.66593185E-03,      0.49759283E-02,     -0.42586259E-04
+ CTF,   3,     -0.56015066    ,      0.64905154E-01,     -0.56015066    ,      0.72372323E-02
+ CTF,   2,       8.4807358    ,      0.64403548    ,       8.4807358    ,     -0.17211907    
+ CTF,   1,      -27.249377    ,      0.79578406    ,      -27.249377    ,      0.87330703    
+ CTF,   0,       20.906886    ,      0.77674710E-01,       20.906886    
+ Construction CTF,PROJECT INTERNAL DOOR_REV,  10,   1,   5,   0.167,      5.429    ,   0.900,   0.900,   0.500,   0.500,Rough
+ Material CTF Summary,PAINTED OAK_.035,  0.0350,         0.190,    700.000,     2390.000,  0.1842    
+ CTF,   5,     -0.44788911E-05,      0.35521661E-06,     -0.44788911E-05,      0.29024899E-07
+ CTF,   4,      0.49759283E-02,      0.66593185E-03,      0.49759283E-02,     -0.42586259E-04
+ CTF,   3,     -0.56015066    ,      0.64905154E-01,     -0.56015066    ,      0.72372323E-02
+ CTF,   2,       8.4807358    ,      0.64403548    ,       8.4807358    ,     -0.17211907    
+ CTF,   1,      -27.249377    ,      0.79578406    ,      -27.249377    ,      0.87330703    
+ CTF,   0,       20.906886    ,      0.77674710E-01,       20.906886    
+ Construction CTF,WALL_LAYER,  11,   4,  14,   0.167,      1.558    ,   0.900,   0.900,   0.700,   0.500,Rough
+ Material CTF Summary,BRICKWORK OUTER_.1,  0.1000,         0.840,   1700.000,      800.000,  0.1190    
+ Material CTF Summary,_INSULATIONEX_.01,  0.0100,         0.034,     35.000,     1400.000,  0.2941    
+ Material CTF Summary,CONCRETE BLOCK (MEDIUM)_.1,  0.1000,         0.510,   1400.000,     1000.000,  0.1961    
+ Material CTF Summary,GYPSUM PLASTERING_.013,  0.0130,         0.400,   1000.000,     1000.000,  0.3250E-01
+ CTF,  14,      0.49721105E-14,     -0.19048004E-16,      0.96432773E-11,     -0.97715630E-16
+ CTF,  13,     -0.18727494E-09,      0.75850950E-14,     -0.37367952E-08,      0.17892922E-11
+ CTF,  12,      0.65825030E-07,      0.14650521E-13,      0.51706436E-06,     -0.65693896E-09
+ CTF,  11,     -0.76485199E-05,      0.17744353E-11,     -0.34676457E-04,      0.81157088E-07
+ CTF,  10,      0.41182807E-03,      0.51315681E-09,      0.12946497E-02,     -0.46649221E-05
+ CTF,   9,     -0.12127244E-01,      0.44104061E-07,     -0.28940134E-01,      0.14725333E-03
+ CTF,   8,      0.21141226    ,      0.13580694E-05,      0.40292661    ,     -0.27664610E-02
+ CTF,   7,      -2.2650921    ,      0.16621836E-04,      -3.5735470    ,      0.32160035E-01
+ CTF,   6,       15.180732    ,      0.84663889E-04,       20.473095    ,     -0.23567604    
+ CTF,   5,      -64.235047    ,      0.17969479E-03,      -76.260797    ,       1.0972658    
+ CTF,   4,       171.72230    ,      0.15166572E-03,       184.24344    ,      -3.2383411    
+ CTF,   3,      -286.40432    ,      0.45237824E-04,      -284.01831    ,       5.9664937    
+ CTF,   2,       287.02795    ,      0.36743383E-05,       267.87006    ,      -6.5934801    
+ CTF,   1,      -157.44818    ,      0.43015459E-07,      -140.22290    ,       3.9738914    
+ CTF,   0,       36.222438    ,     -0.20593857E-09,       31.114192    
+ Construction CTF,ROOF_LAYER,  13,   4,   5,   0.167,      2.015    ,   0.900,   0.900,   0.850,   0.500,Rough
+ Material CTF Summary,ASPHALT 1_.01,  0.0100,         0.700,   2100.000,     1000.000,  0.1429E-01
+ Material CTF Summary,_INSULATIONEX_ROOF_.01,  0.0100,         0.040,     12.000,      840.000,  0.2500    
+ Material CTF Summary,11_RVAL_3,  0.0000,         0.000,      0.000,        0.000,  0.1800    
+ Material CTF Summary,PLASTERBOARD_.013,  0.0130,         0.250,   2800.000,      896.000,  0.5200E-01
+ CTF,   5,     -0.12549669E-11,      0.17569254E-14,     -0.66715827E-13,      0.24728881E-15
+ CTF,   4,      0.14845080E-04,      0.98004207E-07,      0.50428231E-05,     -0.23933274E-12
+ CTF,   3,     -0.28226632E-01,      0.11347802E-02,     -0.22943716E-01,      0.28503598E-05
+ CTF,   2,       13.329152    ,      0.16435426    ,       3.4118787    ,     -0.31853055E-02
+ CTF,   1,      -48.032264    ,      0.84144321    ,      -36.936785    ,      0.40014049    
+ CTF,   0,       35.946435    ,      0.20817811    ,       34.762956    
+! <WindowConstruction>,Construction Name,Index,#Layers,Roughness,Conductance {W/m2-K},SHGC,Solar Transmittance at Normal Incidence,Visible Transmittance at Normal Incidence
+! <WindowMaterial:Glazing>, Material Name, Optical Data Type, Spectral Data Set Name, Thickness {m}, Solar Transmittance,Front Solar Reflectance, Back Solar Reflectance, Visible Transmittance, Front Visible Reflectance,Back Visible Reflectance,Infrared Transmittance, Front Thermal Emissivity, Back Thermal Emissivity,Conductivity {W/m-K},Dirt Factor,Solar Diffusing
+! <WindowMaterial:Gas>,Material Name,GasType,Thickness {m}
+! <WindowMaterial:Blind>,Material Name,Slat Width {m},Slat Separation {m},Slat Thickness {m},Slat Angle {deg},Slat Beam Solar Transmittance,Slat Beam Solar Front Reflectance,Blind To Glass Distance {m}
+ WindowConstruction,SGL CLR 6MM - 1001,15,1,VerySmooth,5.778,0.819,0.775,0.881
+ WindowMaterial:Glazing,3,SpectralAverage,,6.00000E-003,0.77500,7.10000E-002,7.10000E-002,0.88100,8.00000E-002,8.00000E-002,0.00000,0.84000,0.84000,0.90000,1.00000,No
+ WindowConstruction,SGL CLR 6MM - 2001,16,2,VerySmooth,5.778,0.640,0.114,0.131
+ WindowMaterial:Glazing,3,SpectralAverage,,6.00000E-003,0.77500,7.10000E-002,7.10000E-002,0.88100,8.00000E-002,8.00000E-002,0.00000,0.84000,0.84000,0.90000,1.00000,No
+ WindowMaterial:Blind,20002,2.5000E-002,1.8750E-002,1.0000E-003,45.000,0.000,0.500,5.000E-002
+ WindowConstruction,TRP LOE (E2=E5=.1) CLR 3MM/13MM ARG - 1002,17,5,VerySmooth,0.780,0.474,0.358,0.661
+ WindowMaterial:Glazing,40,SpectralAverage,,3.00000E-003,0.63000,0.19000,0.22000,0.85000,5.60000E-002,7.90000E-002,0.00000,0.84000,0.10000,0.90000,1.00000,No
+ WindowMaterial:Gas,1004,Argon,1.300E-002
+ WindowMaterial:Glazing,2,SpectralAverage,,3.00000E-003,0.83700,7.50000E-002,7.50000E-002,0.89800,8.10000E-002,8.10000E-002,0.00000,0.84000,0.84000,0.90000,1.00000,No
+ WindowMaterial:Gas,1004,Argon,1.300E-002
+ WindowMaterial:Glazing,41,SpectralAverage,,3.00000E-003,0.63000,0.22000,0.19000,0.85000,7.90000E-002,5.60000E-002,0.00000,0.10000,0.84000,0.90000,1.00000,No
+ WindowConstruction,TRP LOE (E2=E5=.1) CLR 3MM/13MM ARG - 2002,18,6,VerySmooth,0.780,0.429,5.861E-002,0.104
+ WindowMaterial:Glazing,40,SpectralAverage,,3.00000E-003,0.63000,0.19000,0.22000,0.85000,5.60000E-002,7.90000E-002,0.00000,0.84000,0.10000,0.90000,1.00000,No
+ WindowMaterial:Gas,1004,Argon,1.300E-002
+ WindowMaterial:Glazing,2,SpectralAverage,,3.00000E-003,0.83700,7.50000E-002,7.50000E-002,0.89800,8.10000E-002,8.10000E-002,0.00000,0.84000,0.84000,0.90000,1.00000,No
+ WindowMaterial:Gas,1004,Argon,1.300E-002
+ WindowMaterial:Glazing,41,SpectralAverage,,3.00000E-003,0.63000,0.22000,0.19000,0.85000,7.90000E-002,5.60000E-002,0.00000,0.10000,0.84000,0.90000,1.00000,No
+ WindowMaterial:Blind,20002,2.5000E-002,1.8750E-002,1.0000E-003,45.000,0.000,0.500,5.000E-002
+ WindowConstruction,DBL LOE (E2=.1) CLR 6MM/13MM ARG - 1003,19,3,VerySmooth,1.493,0.568,0.474,0.745
+ WindowMaterial:Glazing,42,SpectralAverage,,6.00000E-003,0.60000,0.17000,0.22000,0.84000,5.50000E-002,7.80000E-002,0.00000,0.84000,0.10000,0.90000,1.00000,No
+ WindowMaterial:Gas,1004,Argon,1.300E-002
+ WindowMaterial:Glazing,3,SpectralAverage,,6.00000E-003,0.77500,7.10000E-002,7.10000E-002,0.88100,8.00000E-002,8.00000E-002,0.00000,0.84000,0.84000,0.90000,1.00000,No
+ WindowConstruction,DBL LOE (E2=.1) CLR 6MM/13MM ARG - 2003,20,4,VerySmooth,1.493,0.490,7.480E-002,0.116
+ WindowMaterial:Glazing,42,SpectralAverage,,6.00000E-003,0.60000,0.17000,0.22000,0.84000,5.50000E-002,7.80000E-002,0.00000,0.84000,0.10000,0.90000,1.00000,No
+ WindowMaterial:Gas,1004,Argon,1.300E-002
+ WindowMaterial:Glazing,3,SpectralAverage,,6.00000E-003,0.77500,7.10000E-002,7.10000E-002,0.88100,8.00000E-002,8.00000E-002,0.00000,0.84000,0.84000,0.90000,1.00000,No
+ WindowMaterial:Blind,20002,2.5000E-002,1.8750E-002,1.0000E-003,45.000,0.000,0.500,5.000E-002
+! <Shadowing/Sun Position Calculations Annual Simulations>, Shading Calculation Method, Shading Calculation Update Frequency Method, Shading Calculation Update Frequency {days}, Maximum Figures in Shadow Overlap Calculations {}, Polygon Clipping Algorithm, Pixel Counting Resolution, Sky Diffuse Modeling Algorithm, Output External Shading Calculation Results, Disable Self-Shading Within Shading Zone Groups, Disable Self-Shading From Shading Zone Groups to Other Zones
+Shadowing/Sun Position Calculations Annual Simulations,PolygonClipping,Periodic,20,15000,SutherlandHodgman,512,SimpleSkyDiffuseModeling,No,No,No
+! <Zone Surfaces>,Zone Name,# Surfaces
+! <Shading Surfaces>,Number of Shading Surfaces,# Surfaces
+! <HeatTransfer Surface>,Surface Name,Surface Class,Base Surface,Heat Transfer Algorithm,Construction,Nominal U (w/o film coefs) {W/m2-K},Nominal U (with film coefs) {W/m2-K},Solar Diffusing,Area (Net) {m2},Area (Gross) {m2},Area (Sunlit Calc) {m2},Azimuth {deg},Tilt {deg},~Width {m},~Height {m},Reveal {m},ExtBoundCondition,ExtConvCoeffCalc,IntConvCoeffCalc,SunExposure,WindExposure,ViewFactorToGround,ViewFactorToSky,ViewFactorToGround-IR,ViewFactorToSky-IR,#Sides
+! <Shading Surface>,Surface Name,Surface Class,Base Surface,Heat Transfer Algorithm,Transmittance Schedule,Min Schedule Value,Max Schedule Value,Solar Diffusing,Area (Net) {m2},Area (Gross) {m2},Area (Sunlit Calc) {m2},Azimuth {deg},Tilt {deg},~Width {m},~Height {m},Reveal {m},ExtBoundCondition,ExtConvCoeffCalc,IntConvCoeffCalc,SunExposure,WindExposure,ViewFactorToGround,ViewFactorToSky,ViewFactorToGround-IR,ViewFactorToSky-IR,#Sides
+! <Frame/Divider Surface>,Surface Name,Surface Class,Base Surface,Heat Transfer Algorithm,Construction,Nominal U (w/o film coefs) {W/m2-K},Nominal U (with film coefs) {W/m2-K},Solar Diffusing,Area (Net) {m2},Area (Gross) {m2},Area (Sunlit Calc) {m2},Azimuth {deg},Tilt {deg},~Width {m},~Height {m},Reveal {m}
+Shading Surfaces,Number of Shading Surfaces,16
+Shading Surface,BUILDING 1 - COMPONENT BLOCK 2 - SURFACE 1 (1),Detached Shading:Building,,None,TRANSMITTANCE SCHEDULE FOR BUILDING 1 - COMPONENT BLOCK 2,0.00,0.00, ,126.00,126.00,126.00,270.00,90.00,18.00,7.00,,,,,,,,,,,4
+Shading Surface,Mir-BUILDING 1 - COMPONENT BLOCK 2 - SURFACE 1 (1),Detached Shading:Building,,None,TRANSMITTANCE SCHEDULE FOR BUILDING 1 - COMPONENT BLOCK 2,0.00,0.00, ,126.00,126.00,126.00,90.00,90.00,18.00,7.00,,,,,,,,,,,4
+Shading Surface,BUILDING 1 - COMPONENT BLOCK 1 - SURFACE 1 (2),Detached Shading:Building,,None,TRANSMITTANCE SCHEDULE FOR BUILDING 1 - COMPONENT BLOCK 1,0.00,0.00, ,126.00,126.00,126.00,90.00,90.00,18.00,7.00,,,,,,,,,,,4
+Shading Surface,Mir-BUILDING 1 - COMPONENT BLOCK 1 - SURFACE 1 (2),Detached Shading:Building,,None,TRANSMITTANCE SCHEDULE FOR BUILDING 1 - COMPONENT BLOCK 1,0.00,0.00, ,126.00,126.00,126.00,270.00,90.00,18.00,7.00,,,,,,,,,,,4
+Shading Surface,BUILDING 1 - COMPONENT BLOCK 3 - SURFACE 1 (3),Detached Shading:Building,,None,TRANSMITTANCE SCHEDULE FOR BUILDING 1 - COMPONENT BLOCK 3,0.00,0.00, ,291.60,291.60,291.60,0.00,180.00,16.20,18.00,,,,,,,,,,,4
+Shading Surface,Mir-BUILDING 1 - COMPONENT BLOCK 3 - SURFACE 1 (3),Detached Shading:Building,,None,TRANSMITTANCE SCHEDULE FOR BUILDING 1 - COMPONENT BLOCK 3,0.00,0.00, ,291.60,291.60,291.60,180.00,0.00,16.20,18.00,,,,,,,,,,,4
+Shading Surface,BUILDING 1 - COMPONENT BLOCK 3 - SURFACE 2 (4),Detached Shading:Building,,None,TRANSMITTANCE SCHEDULE FOR BUILDING 1 - COMPONENT BLOCK 3,0.00,0.00, ,56.70,56.70,56.70,180.00,90.00,16.20,3.50,,,,,,,,,,,4
+Shading Surface,Mir-BUILDING 1 - COMPONENT BLOCK 3 - SURFACE 2 (4),Detached Shading:Building,,None,TRANSMITTANCE SCHEDULE FOR BUILDING 1 - COMPONENT BLOCK 3,0.00,0.00, ,56.70,56.70,56.70,0.00,90.00,16.20,3.50,,,,,,,,,,,4
+Shading Surface,BUILDING 1 - COMPONENT BLOCK 3 - SURFACE 3 (5),Detached Shading:Building,,None,TRANSMITTANCE SCHEDULE FOR BUILDING 1 - COMPONENT BLOCK 3,0.00,0.00, ,63.00,63.00,63.00,90.00,90.00,18.00,3.50,,,,,,,,,,,4
+Shading Surface,Mir-BUILDING 1 - COMPONENT BLOCK 3 - SURFACE 3 (5),Detached Shading:Building,,None,TRANSMITTANCE SCHEDULE FOR BUILDING 1 - COMPONENT BLOCK 3,0.00,0.00, ,63.00,63.00,63.00,270.00,90.00,18.00,3.50,,,,,,,,,,,4
+Shading Surface,BUILDING 1 - COMPONENT BLOCK 3 - SURFACE 4 (6),Detached Shading:Building,,None,TRANSMITTANCE SCHEDULE FOR BUILDING 1 - COMPONENT BLOCK 3,0.00,0.00, ,63.00,63.00,63.00,270.00,90.00,18.00,3.50,,,,,,,,,,,4
+Shading Surface,Mir-BUILDING 1 - COMPONENT BLOCK 3 - SURFACE 4 (6),Detached Shading:Building,,None,TRANSMITTANCE SCHEDULE FOR BUILDING 1 - COMPONENT BLOCK 3,0.00,0.00, ,63.00,63.00,63.00,90.00,90.00,18.00,3.50,,,,,,,,,,,4
+Shading Surface,BUILDING 1 - COMPONENT BLOCK 3 - SURFACE 5 (7),Detached Shading:Building,,None,TRANSMITTANCE SCHEDULE FOR BUILDING 1 - COMPONENT BLOCK 3,0.00,0.00, ,56.70,56.70,56.70,0.00,90.00,16.20,3.50,,,,,,,,,,,4
+Shading Surface,Mir-BUILDING 1 - COMPONENT BLOCK 3 - SURFACE 5 (7),Detached Shading:Building,,None,TRANSMITTANCE SCHEDULE FOR BUILDING 1 - COMPONENT BLOCK 3,0.00,0.00, ,56.70,56.70,56.70,180.00,90.00,16.20,3.50,,,,,,,,,,,4
+Shading Surface,BUILDING 1 - COMPONENT BLOCK 3 - SURFACE 6 (8),Detached Shading:Building,,None,TRANSMITTANCE SCHEDULE FOR BUILDING 1 - COMPONENT BLOCK 3,0.00,0.00, ,291.60,291.60,291.60,180.00,0.00,16.20,18.00,,,,,,,,,,,4
+Shading Surface,Mir-BUILDING 1 - COMPONENT BLOCK 3 - SURFACE 6 (8),Detached Shading:Building,,None,TRANSMITTANCE SCHEDULE FOR BUILDING 1 - COMPONENT BLOCK 3,0.00,0.00, ,291.60,291.60,291.60,0.00,180.00,16.20,18.00,,,,,,,,,,,4
+Zone Surfaces,BLOCK1:OFFICEXSWX1F,8
+HeatTransfer Surface,BLOCK1:OFFICEXSWX1F_PARTITION_2_0_0,Wall,,CTF - ConductionTransferFunction,PROJECT PARTITION,2.857,2.001,,28.00,28.00,28.00,90.00,90.00,8.00,3.50,0.00,BLOCK1:OFFICEXSEX1F_PARTITION_4_0_10002,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK1:OFFICEXSWX1F_PARTITION_3_0_0,Wall,,CTF - ConductionTransferFunction,PROJECT PARTITION,2.857,2.001,,26.11,28.00,26.11,0.00,90.00,8.00,3.50,0.00,BLOCK1:CORRIDORX1F_PARTITION_6_0_10003,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK1:OFFICEXSWX1F_PARTITION_3_0_0_0_0_0_DOOR,Door,BLOCK1:OFFICEXSWX1F_PARTITION_3_0_0,CTF - ConductionTransferFunction,PROJECT INTERNAL DOOR,5.429,5.429,,1.89,1.89,1.89,0.00,90.00,0.90,2.10,0.00,BLOCK1:CORRIDORX1F_PARTITION_6_0_0_0_0_0_DOOR_10005,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK1:OFFICEXSWX1F_PARTITION_4_0_0,Wall,,CTF - ConductionTransferFunction,PROJECT PARTITION,2.857,2.001,,28.00,28.00,28.00,270.00,90.00,8.00,3.50,0.00,BLOCK1:OFFICEXSWX1F_PARTITION_4_0_0,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK1:OFFICEXSWX1F_WALL_5_0_0,Wall,,CTF - ConductionTransferFunction,WALL_LAYER,1.558,1.264,,19.99,28.00,20.53,180.00,90.00,8.00,3.50,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK1:OFFICEXSWX1F_WALL_5_0_0_0_0_0_WIN,Window,BLOCK1:OFFICEXSWX1F_WALL_5_0_0,Window5 Detailed Fenestration,SGL CLR 6MM - 1001,N/A,5.778,No,7.33,7.47,7.47,180.00,90.00,5.26,1.42,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+Frame/Divider Surface,1,Frame,BLOCK1:OFFICEXSWX1F_WALL_5_0_0_0_0_0_WIN,Window5 Detailed Fenestration,,N/A,N/A,,0.54,0.54,*,N/A,N/A,4.00E-002,N/A
+Frame/Divider Surface,1,Divider:DividedLite,BLOCK1:OFFICEXSWX1F_WALL_5_0_0_0_0_0_WIN,,,N/A,N/A,,0.13,0.13,*,N/A,N/A,2.00E-002,N/A
+HeatTransfer Surface,BLOCK1:OFFICEXSWX1F_FLOOR_0_0_0,Floor,,CTF - ConductionTransferFunction,PROJECT INTERNAL FLOOR,14.000,3.180,,64.00,64.00,64.00,0.00,180.00,8.00,8.00,0.00,BLOCK1:OFFICEXSWX1F_FLOOR_0_0_0,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.00,1.00,0.00,4
+HeatTransfer Surface,BLOCK1:OFFICEXSWX1F_CEILING_1_0_0,Roof,,CTF - ConductionTransferFunction,PROJECT INTERNAL FLOOR_REVERSED,14.000,3.848,,64.00,64.00,64.00,180.00,0.00,8.00,8.00,0.00,BLOCK2:OFFICEXSWX2F_FLOOR_0_0_10001,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,1.00,0.00,1.00,4
+Zone Surfaces,BLOCK1:OFFICEXSEX1F,8
+HeatTransfer Surface,BLOCK1:OFFICEXSEX1F_PARTITION_4_0_10002,Wall,,CTF - ConductionTransferFunction,PROJECT PARTITION_REV,2.857,2.001,,28.00,28.00,28.00,270.00,90.00,8.00,3.50,0.00,BLOCK1:OFFICEXSWX1F_PARTITION_2_0_0,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK1:OFFICEXSEX1F_PARTITION_2_0_0,Wall,,CTF - ConductionTransferFunction,PROJECT PARTITION,2.857,2.001,,28.00,28.00,28.00,90.00,90.00,8.00,3.50,0.00,BLOCK1:OFFICEXSEX1F_PARTITION_2_0_0,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK1:OFFICEXSEX1F_PARTITION_3_0_0,Wall,,CTF - ConductionTransferFunction,PROJECT PARTITION,2.857,2.001,,26.11,28.00,26.11,0.00,90.00,8.00,3.50,0.00,BLOCK1:CORRIDORX1F_PARTITION_7_0_10009,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK1:OFFICEXSEX1F_PARTITION_3_0_0_0_0_0_DOOR,Door,BLOCK1:OFFICEXSEX1F_PARTITION_3_0_0,CTF - ConductionTransferFunction,PROJECT INTERNAL DOOR,5.429,5.429,,1.89,1.89,1.89,0.00,90.00,0.90,2.10,0.00,BLOCK1:CORRIDORX1F_PARTITION_7_0_0_0_0_0_DOOR_10011,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK1:OFFICEXSEX1F_WALL_5_0_0,Wall,,CTF - ConductionTransferFunction,WALL_LAYER,1.558,1.264,,19.99,28.00,20.53,180.00,90.00,8.00,3.50,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK1:OFFICEXSEX1F_WALL_5_0_0_0_0_0_WIN,Window,BLOCK1:OFFICEXSEX1F_WALL_5_0_0,Window5 Detailed Fenestration,SGL CLR 6MM - 1001,N/A,5.778,No,7.33,7.47,7.47,180.00,90.00,5.26,1.42,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+Frame/Divider Surface,1,Frame,BLOCK1:OFFICEXSEX1F_WALL_5_0_0_0_0_0_WIN,Window5 Detailed Fenestration,,N/A,N/A,,0.54,0.54,*,N/A,N/A,4.00E-002,N/A
+Frame/Divider Surface,1,Divider:DividedLite,BLOCK1:OFFICEXSEX1F_WALL_5_0_0_0_0_0_WIN,,,N/A,N/A,,0.13,0.13,*,N/A,N/A,2.00E-002,N/A
+HeatTransfer Surface,BLOCK1:OFFICEXSEX1F_FLOOR_0_0_0,Floor,,CTF - ConductionTransferFunction,PROJECT INTERNAL FLOOR,14.000,3.180,,64.00,64.00,64.00,0.00,180.00,8.00,8.00,0.00,BLOCK1:OFFICEXSEX1F_FLOOR_0_0_0,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.00,1.00,0.00,4
+HeatTransfer Surface,BLOCK1:OFFICEXSEX1F_CEILING_1_0_0,Roof,,CTF - ConductionTransferFunction,PROJECT INTERNAL FLOOR_REVERSED,14.000,3.848,,64.00,64.00,64.00,180.00,0.00,8.00,8.00,0.00,BLOCK2:OFFICEXSEX2F_FLOOR_0_0_10007,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,1.00,0.00,1.00,4
+Zone Surfaces,BLOCK1:OFFICEXNWX1F,8
+HeatTransfer Surface,BLOCK1:OFFICEXNWX1F_PARTITION_2_0_0,Wall,,CTF - ConductionTransferFunction,PROJECT PARTITION,2.857,2.001,,28.00,28.00,28.00,90.00,90.00,8.00,3.50,0.00,BLOCK1:OFFICEXNEX1F_PARTITION_4_0_10013,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK1:OFFICEXNWX1F_WALL_3_0_0,Wall,,CTF - ConductionTransferFunction,WALL_LAYER,1.558,1.264,,19.99,28.00,20.53,0.00,90.00,8.00,3.50,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK1:OFFICEXNWX1F_WALL_3_0_0_0_0_0_WIN,Window,BLOCK1:OFFICEXNWX1F_WALL_3_0_0,Window5 Detailed Fenestration,SGL CLR 6MM - 1001,N/A,5.778,No,7.33,7.47,7.47,0.00,90.00,5.26,1.42,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+Frame/Divider Surface,1,Frame,BLOCK1:OFFICEXNWX1F_WALL_3_0_0_0_0_0_WIN,Window5 Detailed Fenestration,,N/A,N/A,,0.54,0.54,*,N/A,N/A,4.00E-002,N/A
+Frame/Divider Surface,1,Divider:DividedLite,BLOCK1:OFFICEXNWX1F_WALL_3_0_0_0_0_0_WIN,,,N/A,N/A,,0.13,0.13,*,N/A,N/A,2.00E-002,N/A
+HeatTransfer Surface,BLOCK1:OFFICEXNWX1F_PARTITION_4_0_0,Wall,,CTF - ConductionTransferFunction,PROJECT PARTITION,2.857,2.001,,28.00,28.00,28.00,270.00,90.00,8.00,3.50,0.00,BLOCK1:OFFICEXNWX1F_PARTITION_4_0_0,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK1:OFFICEXNWX1F_PARTITION_5_0_0,Wall,,CTF - ConductionTransferFunction,PROJECT PARTITION,2.857,2.001,,26.11,28.00,26.11,180.00,90.00,8.00,3.50,0.00,BLOCK1:CORRIDORX1F_PARTITION_4_0_10015,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK1:OFFICEXNWX1F_PARTITION_5_0_0_0_0_0_DOOR,Door,BLOCK1:OFFICEXNWX1F_PARTITION_5_0_0,CTF - ConductionTransferFunction,PROJECT INTERNAL DOOR,5.429,5.429,,1.89,1.89,1.89,180.00,90.00,0.90,2.10,0.00,BLOCK1:CORRIDORX1F_PARTITION_4_0_0_0_0_0_DOOR_10017,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK1:OFFICEXNWX1F_FLOOR_0_0_0,Floor,,CTF - ConductionTransferFunction,PROJECT INTERNAL FLOOR,14.000,3.180,,64.00,64.00,64.00,0.00,180.00,8.00,8.00,0.00,BLOCK1:OFFICEXNWX1F_FLOOR_0_0_0,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.00,1.00,0.00,4
+HeatTransfer Surface,BLOCK1:OFFICEXNWX1F_CEILING_1_0_0,Roof,,CTF - ConductionTransferFunction,PROJECT INTERNAL FLOOR_REVERSED,14.000,3.848,,64.00,64.00,64.00,180.00,0.00,8.00,8.00,0.00,BLOCK2:OFFICEXNWX2F_FLOOR_0_0_10012,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,1.00,0.00,1.00,4
+Zone Surfaces,BLOCK1:OFFICEXNEX1F,8
+HeatTransfer Surface,BLOCK1:OFFICEXNEX1F_PARTITION_4_0_10013,Wall,,CTF - ConductionTransferFunction,PROJECT PARTITION_REV,2.857,2.001,,28.00,28.00,28.00,270.00,90.00,8.00,3.50,0.00,BLOCK1:OFFICEXNWX1F_PARTITION_2_0_0,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK1:OFFICEXNEX1F_PARTITION_2_0_0,Wall,,CTF - ConductionTransferFunction,PROJECT PARTITION,2.857,2.001,,28.00,28.00,28.00,90.00,90.00,8.00,3.50,0.00,BLOCK1:OFFICEXNEX1F_PARTITION_2_0_0,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK1:OFFICEXNEX1F_WALL_3_0_0,Wall,,CTF - ConductionTransferFunction,WALL_LAYER,1.558,1.264,,19.99,28.00,20.53,0.00,90.00,8.00,3.50,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK1:OFFICEXNEX1F_WALL_3_0_0_0_0_0_WIN,Window,BLOCK1:OFFICEXNEX1F_WALL_3_0_0,Window5 Detailed Fenestration,SGL CLR 6MM - 1001,N/A,5.778,No,7.33,7.47,7.47,0.00,90.00,5.26,1.42,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+Frame/Divider Surface,1,Frame,BLOCK1:OFFICEXNEX1F_WALL_3_0_0_0_0_0_WIN,Window5 Detailed Fenestration,,N/A,N/A,,0.54,0.54,*,N/A,N/A,4.00E-002,N/A
+Frame/Divider Surface,1,Divider:DividedLite,BLOCK1:OFFICEXNEX1F_WALL_3_0_0_0_0_0_WIN,,,N/A,N/A,,0.13,0.13,*,N/A,N/A,2.00E-002,N/A
+HeatTransfer Surface,BLOCK1:OFFICEXNEX1F_PARTITION_5_0_0,Wall,,CTF - ConductionTransferFunction,PROJECT PARTITION,2.857,2.001,,26.11,28.00,26.11,180.00,90.00,8.00,3.50,0.00,BLOCK1:CORRIDORX1F_PARTITION_3_0_10020,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK1:OFFICEXNEX1F_PARTITION_5_0_0_0_0_0_DOOR,Door,BLOCK1:OFFICEXNEX1F_PARTITION_5_0_0,CTF - ConductionTransferFunction,PROJECT INTERNAL DOOR,5.429,5.429,,1.89,1.89,1.89,180.00,90.00,0.90,2.10,0.00,BLOCK1:CORRIDORX1F_PARTITION_3_0_0_0_0_0_DOOR_10022,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK1:OFFICEXNEX1F_FLOOR_0_0_0,Floor,,CTF - ConductionTransferFunction,PROJECT INTERNAL FLOOR,14.000,3.180,,64.00,64.00,64.00,0.00,180.00,8.00,8.00,0.00,BLOCK1:OFFICEXNEX1F_FLOOR_0_0_0,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.00,1.00,0.00,4
+HeatTransfer Surface,BLOCK1:OFFICEXNEX1F_CEILING_1_0_0,Roof,,CTF - ConductionTransferFunction,PROJECT INTERNAL FLOOR_REVERSED,14.000,3.848,,64.00,64.00,64.00,180.00,0.00,8.00,8.00,0.00,BLOCK2:OFFICEXNEX2F_FLOOR_0_0_10018,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,1.00,0.00,1.00,4
+Zone Surfaces,BLOCK1:CORRIDORX1F,12
+HeatTransfer Surface,BLOCK1:CORRIDORX1F_PARTITION_6_0_10003,Wall,,CTF - ConductionTransferFunction,PROJECT PARTITION_REV,2.857,2.001,,26.11,28.00,26.11,180.00,90.00,8.00,3.50,0.00,BLOCK1:OFFICEXSWX1F_PARTITION_3_0_0,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK1:CORRIDORX1F_PARTITION_6_0_0_0_0_0_DOOR_10005,Door,BLOCK1:CORRIDORX1F_PARTITION_6_0_10003,CTF - ConductionTransferFunction,PROJECT INTERNAL DOOR_REV,5.429,5.429,,1.89,1.89,1.89,180.00,90.00,0.90,2.10,0.00,BLOCK1:OFFICEXSWX1F_PARTITION_3_0_0_0_0_0_DOOR,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK1:CORRIDORX1F_PARTITION_7_0_10009,Wall,,CTF - ConductionTransferFunction,PROJECT PARTITION_REV,2.857,2.001,,26.11,28.00,26.11,180.00,90.00,8.00,3.50,0.00,BLOCK1:OFFICEXSEX1F_PARTITION_3_0_0,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK1:CORRIDORX1F_PARTITION_7_0_0_0_0_0_DOOR_10011,Door,BLOCK1:CORRIDORX1F_PARTITION_7_0_10009,CTF - ConductionTransferFunction,PROJECT INTERNAL DOOR_REV,5.429,5.429,,1.89,1.89,1.89,180.00,90.00,0.90,2.10,0.00,BLOCK1:OFFICEXSEX1F_PARTITION_3_0_0_0_0_0_DOOR,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK1:CORRIDORX1F_PARTITION_4_0_10015,Wall,,CTF - ConductionTransferFunction,PROJECT PARTITION_REV,2.857,2.001,,26.11,28.00,26.11,0.00,90.00,8.00,3.50,0.00,BLOCK1:OFFICEXNWX1F_PARTITION_5_0_0,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK1:CORRIDORX1F_PARTITION_4_0_0_0_0_0_DOOR_10017,Door,BLOCK1:CORRIDORX1F_PARTITION_4_0_10015,CTF - ConductionTransferFunction,PROJECT INTERNAL DOOR_REV,5.429,5.429,,1.89,1.89,1.89,0.00,90.00,0.90,2.10,0.00,BLOCK1:OFFICEXNWX1F_PARTITION_5_0_0_0_0_0_DOOR,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK1:CORRIDORX1F_PARTITION_3_0_10020,Wall,,CTF - ConductionTransferFunction,PROJECT PARTITION_REV,2.857,2.001,,26.11,28.00,26.11,0.00,90.00,8.00,3.50,0.00,BLOCK1:OFFICEXNEX1F_PARTITION_5_0_0,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK1:CORRIDORX1F_PARTITION_3_0_0_0_0_0_DOOR_10022,Door,BLOCK1:CORRIDORX1F_PARTITION_3_0_10020,CTF - ConductionTransferFunction,PROJECT INTERNAL DOOR_REV,5.429,5.429,,1.89,1.89,1.89,0.00,90.00,0.90,2.10,0.00,BLOCK1:OFFICEXNEX1F_PARTITION_5_0_0_0_0_0_DOOR,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK1:CORRIDORX1F_PARTITION_2_0_0,Wall,,CTF - ConductionTransferFunction,PROJECT PARTITION,2.857,2.001,,7.00,7.00,7.00,90.00,90.00,2.00,3.50,0.00,BLOCK1:CORRIDORX1F_PARTITION_2_0_0,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK1:CORRIDORX1F_PARTITION_5_0_0,Wall,,CTF - ConductionTransferFunction,PROJECT PARTITION,2.857,2.001,,7.00,7.00,7.00,270.00,90.00,2.00,3.50,0.00,BLOCK1:CORRIDORX1F_PARTITION_5_0_0,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK1:CORRIDORX1F_FLOOR_0_0_0,Floor,,CTF - ConductionTransferFunction,PROJECT INTERNAL FLOOR,14.000,3.180,,32.00,32.00,32.00,0.00,180.00,16.00,2.00,0.00,BLOCK1:CORRIDORX1F_FLOOR_0_0_0,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.00,1.00,0.00,4
+HeatTransfer Surface,BLOCK1:CORRIDORX1F_CEILING_1_0_0,Roof,,CTF - ConductionTransferFunction,PROJECT INTERNAL FLOOR_REVERSED,14.000,3.848,,32.00,32.00,32.00,180.00,0.00,16.00,2.00,0.00,BLOCK2:CORRIDORX2F_FLOOR_0_0_10023,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,1.00,0.00,1.00,4
+Zone Surfaces,BLOCK2:OFFICEXSWX2F,8
+HeatTransfer Surface,BLOCK2:OFFICEXSWX2F_PARTITION_2_0_0,Wall,,CTF - ConductionTransferFunction,PROJECT PARTITION,2.857,2.001,,28.00,28.00,28.00,90.00,90.00,8.00,3.50,0.00,BLOCK2:OFFICEXSEX2F_PARTITION_4_0_10026,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK2:OFFICEXSWX2F_PARTITION_3_0_0,Wall,,CTF - ConductionTransferFunction,PROJECT PARTITION,2.857,2.001,,26.11,28.00,26.11,0.00,90.00,8.00,3.50,0.00,BLOCK2:CORRIDORX2F_PARTITION_6_0_10027,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK2:OFFICEXSWX2F_PARTITION_3_0_0_0_0_0_DOOR,Door,BLOCK2:OFFICEXSWX2F_PARTITION_3_0_0,CTF - ConductionTransferFunction,PROJECT INTERNAL DOOR,5.429,5.429,,1.89,1.89,1.89,0.00,90.00,0.90,2.10,0.00,BLOCK2:CORRIDORX2F_PARTITION_6_0_0_0_0_0_DOOR_10029,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK2:OFFICEXSWX2F_PARTITION_4_0_0,Wall,,CTF - ConductionTransferFunction,PROJECT PARTITION,2.857,2.001,,28.00,28.00,28.00,270.00,90.00,8.00,3.50,0.00,BLOCK2:OFFICEXSWX2F_PARTITION_4_0_0,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK2:OFFICEXSWX2F_WALL_5_0_0,Wall,,CTF - ConductionTransferFunction,WALL_LAYER,1.558,1.264,,19.99,28.00,20.53,180.00,90.00,8.00,3.50,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK2:OFFICEXSWX2F_WALL_5_0_0_0_0_0_WIN,Window,BLOCK2:OFFICEXSWX2F_WALL_5_0_0,Window5 Detailed Fenestration,SGL CLR 6MM - 1001,N/A,5.778,No,7.33,7.47,7.47,180.00,90.00,5.26,1.42,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+Frame/Divider Surface,1,Frame,BLOCK2:OFFICEXSWX2F_WALL_5_0_0_0_0_0_WIN,Window5 Detailed Fenestration,,N/A,N/A,,0.54,0.54,*,N/A,N/A,4.00E-002,N/A
+Frame/Divider Surface,1,Divider:DividedLite,BLOCK2:OFFICEXSWX2F_WALL_5_0_0_0_0_0_WIN,,,N/A,N/A,,0.13,0.13,*,N/A,N/A,2.00E-002,N/A
+HeatTransfer Surface,BLOCK2:OFFICEXSWX2F_FLOOR_0_0_10001,Floor,,CTF - ConductionTransferFunction,PROJECT INTERNAL FLOOR_REVERSED_REV,14.000,3.180,,64.00,64.00,64.00,0.00,180.00,8.00,8.00,0.00,BLOCK1:OFFICEXSWX1F_CEILING_1_0_0,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.00,1.00,0.00,4
+HeatTransfer Surface,BLOCK2:OFFICEXSWX2F_ROOF_1_0_0,Roof,,CTF - ConductionTransferFunction,ROOF_LAYER,2.015,1.460,,64.00,64.00,64.00,180.00,0.00,8.00,8.00,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.00,1.00,0.00,1.00,4
+Zone Surfaces,BLOCK2:OFFICEXSEX2F,8
+HeatTransfer Surface,BLOCK2:OFFICEXSEX2F_PARTITION_4_0_10026,Wall,,CTF - ConductionTransferFunction,PROJECT PARTITION_REV,2.857,2.001,,28.00,28.00,28.00,270.00,90.00,8.00,3.50,0.00,BLOCK2:OFFICEXSWX2F_PARTITION_2_0_0,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK2:OFFICEXSEX2F_PARTITION_2_0_0,Wall,,CTF - ConductionTransferFunction,PROJECT PARTITION,2.857,2.001,,28.00,28.00,28.00,90.00,90.00,8.00,3.50,0.00,BLOCK2:OFFICEXSEX2F_PARTITION_2_0_0,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK2:OFFICEXSEX2F_PARTITION_3_0_0,Wall,,CTF - ConductionTransferFunction,PROJECT PARTITION,2.857,2.001,,26.11,28.00,26.11,0.00,90.00,8.00,3.50,0.00,BLOCK2:CORRIDORX2F_PARTITION_7_0_10031,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK2:OFFICEXSEX2F_PARTITION_3_0_0_0_0_0_DOOR,Door,BLOCK2:OFFICEXSEX2F_PARTITION_3_0_0,CTF - ConductionTransferFunction,PROJECT INTERNAL DOOR,5.429,5.429,,1.89,1.89,1.89,0.00,90.00,0.90,2.10,0.00,BLOCK2:CORRIDORX2F_PARTITION_7_0_0_0_0_0_DOOR_10033,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK2:OFFICEXSEX2F_WALL_5_0_0,Wall,,CTF - ConductionTransferFunction,WALL_LAYER,1.558,1.264,,19.99,28.00,20.53,180.00,90.00,8.00,3.50,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK2:OFFICEXSEX2F_WALL_5_0_0_0_0_0_WIN,Window,BLOCK2:OFFICEXSEX2F_WALL_5_0_0,Window5 Detailed Fenestration,SGL CLR 6MM - 1001,N/A,5.778,No,7.33,7.47,7.47,180.00,90.00,5.26,1.42,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+Frame/Divider Surface,1,Frame,BLOCK2:OFFICEXSEX2F_WALL_5_0_0_0_0_0_WIN,Window5 Detailed Fenestration,,N/A,N/A,,0.54,0.54,*,N/A,N/A,4.00E-002,N/A
+Frame/Divider Surface,1,Divider:DividedLite,BLOCK2:OFFICEXSEX2F_WALL_5_0_0_0_0_0_WIN,,,N/A,N/A,,0.13,0.13,*,N/A,N/A,2.00E-002,N/A
+HeatTransfer Surface,BLOCK2:OFFICEXSEX2F_FLOOR_0_0_10007,Floor,,CTF - ConductionTransferFunction,PROJECT INTERNAL FLOOR_REVERSED_REV,14.000,3.180,,64.00,64.00,64.00,0.00,180.00,8.00,8.00,0.00,BLOCK1:OFFICEXSEX1F_CEILING_1_0_0,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.00,1.00,0.00,4
+HeatTransfer Surface,BLOCK2:OFFICEXSEX2F_ROOF_1_0_0,Roof,,CTF - ConductionTransferFunction,ROOF_LAYER,2.015,1.460,,64.00,64.00,64.00,180.00,0.00,8.00,8.00,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.00,1.00,0.00,1.00,4
+Zone Surfaces,BLOCK2:OFFICEXNWX2F,8
+HeatTransfer Surface,BLOCK2:OFFICEXNWX2F_PARTITION_2_0_0,Wall,,CTF - ConductionTransferFunction,PROJECT PARTITION,2.857,2.001,,28.00,28.00,28.00,90.00,90.00,8.00,3.50,0.00,BLOCK2:OFFICEXNEX2F_PARTITION_4_0_10033,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK2:OFFICEXNWX2F_WALL_3_0_0,Wall,,CTF - ConductionTransferFunction,WALL_LAYER,1.558,1.264,,19.99,28.00,20.53,0.00,90.00,8.00,3.50,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK2:OFFICEXNWX2F_WALL_3_0_0_0_0_0_WIN,Window,BLOCK2:OFFICEXNWX2F_WALL_3_0_0,Window5 Detailed Fenestration,SGL CLR 6MM - 1001,N/A,5.778,No,7.33,7.47,7.47,0.00,90.00,5.26,1.42,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+Frame/Divider Surface,1,Frame,BLOCK2:OFFICEXNWX2F_WALL_3_0_0_0_0_0_WIN,Window5 Detailed Fenestration,,N/A,N/A,,0.54,0.54,*,N/A,N/A,4.00E-002,N/A
+Frame/Divider Surface,1,Divider:DividedLite,BLOCK2:OFFICEXNWX2F_WALL_3_0_0_0_0_0_WIN,,,N/A,N/A,,0.13,0.13,*,N/A,N/A,2.00E-002,N/A
+HeatTransfer Surface,BLOCK2:OFFICEXNWX2F_PARTITION_4_0_0,Wall,,CTF - ConductionTransferFunction,PROJECT PARTITION,2.857,2.001,,28.00,28.00,28.00,270.00,90.00,8.00,3.50,0.00,BLOCK2:OFFICEXNWX2F_PARTITION_4_0_0,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK2:OFFICEXNWX2F_PARTITION_5_0_0,Wall,,CTF - ConductionTransferFunction,PROJECT PARTITION,2.857,2.001,,26.11,28.00,26.11,180.00,90.00,8.00,3.50,0.00,BLOCK2:CORRIDORX2F_PARTITION_4_0_10035,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK2:OFFICEXNWX2F_PARTITION_5_0_0_0_0_0_DOOR,Door,BLOCK2:OFFICEXNWX2F_PARTITION_5_0_0,CTF - ConductionTransferFunction,PROJECT INTERNAL DOOR,5.429,5.429,,1.89,1.89,1.89,180.00,90.00,0.90,2.10,0.00,BLOCK2:CORRIDORX2F_PARTITION_4_0_0_0_0_0_DOOR_10037,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK2:OFFICEXNWX2F_FLOOR_0_0_10012,Floor,,CTF - ConductionTransferFunction,PROJECT INTERNAL FLOOR_REVERSED_REV,14.000,3.180,,64.00,64.00,64.00,0.00,180.00,8.00,8.00,0.00,BLOCK1:OFFICEXNWX1F_CEILING_1_0_0,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.00,1.00,0.00,4
+HeatTransfer Surface,BLOCK2:OFFICEXNWX2F_ROOF_1_0_0,Roof,,CTF - ConductionTransferFunction,ROOF_LAYER,2.015,1.460,,64.00,64.00,64.00,180.00,0.00,8.00,8.00,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.00,1.00,0.00,1.00,4
+Zone Surfaces,BLOCK2:OFFICEXNEX2F,8
+HeatTransfer Surface,BLOCK2:OFFICEXNEX2F_PARTITION_4_0_10033,Wall,,CTF - ConductionTransferFunction,PROJECT PARTITION_REV,2.857,2.001,,28.00,28.00,28.00,270.00,90.00,8.00,3.50,0.00,BLOCK2:OFFICEXNWX2F_PARTITION_2_0_0,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK2:OFFICEXNEX2F_PARTITION_2_0_0,Wall,,CTF - ConductionTransferFunction,PROJECT PARTITION,2.857,2.001,,28.00,28.00,28.00,90.00,90.00,8.00,3.50,0.00,BLOCK2:OFFICEXNEX2F_PARTITION_2_0_0,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK2:OFFICEXNEX2F_WALL_3_0_0,Wall,,CTF - ConductionTransferFunction,WALL_LAYER,1.558,1.264,,19.99,28.00,20.53,0.00,90.00,8.00,3.50,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK2:OFFICEXNEX2F_WALL_3_0_0_0_0_0_WIN,Window,BLOCK2:OFFICEXNEX2F_WALL_3_0_0,Window5 Detailed Fenestration,SGL CLR 6MM - 1001,N/A,5.778,No,7.33,7.47,7.47,0.00,90.00,5.26,1.42,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.50,0.50,0.50,0.50,4
+Frame/Divider Surface,1,Frame,BLOCK2:OFFICEXNEX2F_WALL_3_0_0_0_0_0_WIN,Window5 Detailed Fenestration,,N/A,N/A,,0.54,0.54,*,N/A,N/A,4.00E-002,N/A
+Frame/Divider Surface,1,Divider:DividedLite,BLOCK2:OFFICEXNEX2F_WALL_3_0_0_0_0_0_WIN,,,N/A,N/A,,0.13,0.13,*,N/A,N/A,2.00E-002,N/A
+HeatTransfer Surface,BLOCK2:OFFICEXNEX2F_PARTITION_5_0_0,Wall,,CTF - ConductionTransferFunction,PROJECT PARTITION,2.857,2.001,,26.11,28.00,26.11,180.00,90.00,8.00,3.50,0.00,BLOCK2:CORRIDORX2F_PARTITION_3_0_10038,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK2:OFFICEXNEX2F_PARTITION_5_0_0_0_0_0_DOOR,Door,BLOCK2:OFFICEXNEX2F_PARTITION_5_0_0,CTF - ConductionTransferFunction,PROJECT INTERNAL DOOR,5.429,5.429,,1.89,1.89,1.89,180.00,90.00,0.90,2.10,0.00,BLOCK2:CORRIDORX2F_PARTITION_3_0_0_0_0_0_DOOR_10040,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK2:OFFICEXNEX2F_FLOOR_0_0_10018,Floor,,CTF - ConductionTransferFunction,PROJECT INTERNAL FLOOR_REVERSED_REV,14.000,3.180,,64.00,64.00,64.00,0.00,180.00,8.00,8.00,0.00,BLOCK1:OFFICEXNEX1F_CEILING_1_0_0,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.00,1.00,0.00,4
+HeatTransfer Surface,BLOCK2:OFFICEXNEX2F_ROOF_1_0_0,Roof,,CTF - ConductionTransferFunction,ROOF_LAYER,2.015,1.460,,64.00,64.00,64.00,180.00,0.00,8.00,8.00,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.00,1.00,0.00,1.00,4
+Zone Surfaces,BLOCK2:CORRIDORX2F,12
+HeatTransfer Surface,BLOCK2:CORRIDORX2F_PARTITION_6_0_10027,Wall,,CTF - ConductionTransferFunction,PROJECT PARTITION_REV,2.857,2.001,,26.11,28.00,26.11,180.00,90.00,8.00,3.50,0.00,BLOCK2:OFFICEXSWX2F_PARTITION_3_0_0,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK2:CORRIDORX2F_PARTITION_6_0_0_0_0_0_DOOR_10029,Door,BLOCK2:CORRIDORX2F_PARTITION_6_0_10027,CTF - ConductionTransferFunction,PROJECT INTERNAL DOOR_REV,5.429,5.429,,1.89,1.89,1.89,180.00,90.00,0.90,2.10,0.00,BLOCK2:OFFICEXSWX2F_PARTITION_3_0_0_0_0_0_DOOR,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK2:CORRIDORX2F_PARTITION_7_0_10031,Wall,,CTF - ConductionTransferFunction,PROJECT PARTITION_REV,2.857,2.001,,26.11,28.00,26.11,180.00,90.00,8.00,3.50,0.00,BLOCK2:OFFICEXSEX2F_PARTITION_3_0_0,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK2:CORRIDORX2F_PARTITION_7_0_0_0_0_0_DOOR_10033,Door,BLOCK2:CORRIDORX2F_PARTITION_7_0_10031,CTF - ConductionTransferFunction,PROJECT INTERNAL DOOR_REV,5.429,5.429,,1.89,1.89,1.89,180.00,90.00,0.90,2.10,0.00,BLOCK2:OFFICEXSEX2F_PARTITION_3_0_0_0_0_0_DOOR,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK2:CORRIDORX2F_PARTITION_4_0_10035,Wall,,CTF - ConductionTransferFunction,PROJECT PARTITION_REV,2.857,2.001,,26.11,28.00,26.11,0.00,90.00,8.00,3.50,0.00,BLOCK2:OFFICEXNWX2F_PARTITION_5_0_0,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK2:CORRIDORX2F_PARTITION_4_0_0_0_0_0_DOOR_10037,Door,BLOCK2:CORRIDORX2F_PARTITION_4_0_10035,CTF - ConductionTransferFunction,PROJECT INTERNAL DOOR_REV,5.429,5.429,,1.89,1.89,1.89,0.00,90.00,0.90,2.10,0.00,BLOCK2:OFFICEXNWX2F_PARTITION_5_0_0_0_0_0_DOOR,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK2:CORRIDORX2F_PARTITION_3_0_10038,Wall,,CTF - ConductionTransferFunction,PROJECT PARTITION_REV,2.857,2.001,,26.11,28.00,26.11,0.00,90.00,8.00,3.50,0.00,BLOCK2:OFFICEXNEX2F_PARTITION_5_0_0,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK2:CORRIDORX2F_PARTITION_3_0_0_0_0_0_DOOR_10040,Door,BLOCK2:CORRIDORX2F_PARTITION_3_0_10038,CTF - ConductionTransferFunction,PROJECT INTERNAL DOOR_REV,5.429,5.429,,1.89,1.89,1.89,0.00,90.00,0.90,2.10,0.00,BLOCK2:OFFICEXNEX2F_PARTITION_5_0_0_0_0_0_DOOR,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK2:CORRIDORX2F_PARTITION_2_0_0,Wall,,CTF - ConductionTransferFunction,PROJECT PARTITION,2.857,2.001,,7.00,7.00,7.00,90.00,90.00,2.00,3.50,0.00,BLOCK2:CORRIDORX2F_PARTITION_2_0_0,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK2:CORRIDORX2F_PARTITION_5_0_0,Wall,,CTF - ConductionTransferFunction,PROJECT PARTITION,2.857,2.001,,7.00,7.00,7.00,270.00,90.00,2.00,3.50,0.00,BLOCK2:CORRIDORX2F_PARTITION_5_0_0,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.50,0.50,0.50,4
+HeatTransfer Surface,BLOCK2:CORRIDORX2F_FLOOR_0_0_10023,Floor,,CTF - ConductionTransferFunction,PROJECT INTERNAL FLOOR_REVERSED_REV,14.000,3.180,,32.00,32.00,32.00,0.00,180.00,16.00,2.00,0.00,BLOCK1:CORRIDORX1F_CEILING_1_0_0,Other/Same Surface Int Conv,ASHRAETARP,NoSun,NoWind,0.00,0.00,1.00,0.00,4
+HeatTransfer Surface,BLOCK2:CORRIDORX2F_ROOF_1_0_0,Roof,,CTF - ConductionTransferFunction,ROOF_LAYER,2.015,1.460,,32.00,32.00,32.00,180.00,0.00,16.00,2.00,0.00,ExternalEnvironment,DOE-2,ASHRAETARP,SunExposed,WindExposed,0.00,1.00,0.00,1.00,4

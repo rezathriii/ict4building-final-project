@@ -1,0 +1,36 @@
+
+Conversion 9.4 => 9.5
+ Starting new Transition.audit
+ Will create new full IDFs
+ Will create new IDF lines with units where applicable
+ Will create new IDF lines leaving blank incoming fields as blank (no default fill)
+ Processing IDF -- D:\Categorized\polito\S3\ICT_in_Building_Design\Project\IDF-optimization\data\office\Office_IDF_2_win.idf
+   ** Warning ** Object=SimulationControl, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=Sizing:Zone, name=Block1:OfficeXSWX1f, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=Sizing:Zone, name=Block1:OfficeXSEX1f, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=Sizing:Zone, name=Block1:OfficeXNWX1f, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=Sizing:Zone, name=Block1:OfficeXNEX1f, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=Sizing:Zone, name=Block1:CorridorX1f, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=Sizing:Zone, name=Block2:OfficeXSWX2f, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=Sizing:Zone, name=Block2:OfficeXSEX2f, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=Sizing:Zone, name=Block2:OfficeXNWX2f, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=Sizing:Zone, name=Block2:OfficeXNEX2f, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+   ** Warning ** Object=Sizing:Zone, name=Block2:CorridorX2f, entered with less than minimum number of fields.
+   **   ~~~   ** Attempting fill to minimum.
+
+Conversion 9.5 => 9.6
+ Starting new Transition.audit
+ Will create new full IDFs
+ Will create new IDF lines with units where applicable
+ Will create new IDF lines leaving blank incoming fields as blank (no default fill)
+ Processing IDF -- D:\Categorized\polito\S3\ICT_in_Building_Design\Project\IDF-optimization\data\office\Office_IDF_2_win.idf

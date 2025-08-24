@@ -1,0 +1,106 @@
+Program Version,EnergyPlus, Version 9.6.0-f420c06a69, YMD=2024.12.17 19:59
+1,5,Environment Title[],Latitude[deg],Longitude[deg],Time Zone[],Elevation[m]
+2,8,Day of Simulation[],Month[],Day of Month[],DST Indicator[1=yes 0=no],Hour[],StartMinute[],EndMinute[],DayType
+3,5,Cumulative Day of Simulation[],Month[],Day of Month[],DST Indicator[1=yes 0=no],DayType  ! When Daily Report Variables Requested
+4,2,Cumulative Days of Simulation[],Month[]  ! When Monthly Report Variables Requested
+5,1,Cumulative Days of Simulation[] ! When Run Period Report Variables Requested
+6,1,Calendar Year of Simulation[] ! When Annual Report Variables Requested
+7,1,Environment,Site Outdoor Air Drybulb Temperature [C] !TimeStep
+8,1,Environment,Site Outdoor Air Dewpoint Temperature [C] !TimeStep
+9,1,Environment,Site Outdoor Air Barometric Pressure [Pa] !TimeStep
+10,1,Environment,Site Wind Speed [m/s] !TimeStep
+11,1,Environment,Site Wind Direction [deg] !TimeStep
+12,1,Environment,Site Diffuse Solar Radiation Rate per Area [W/m2] !TimeStep
+13,1,Environment,Site Direct Solar Radiation Rate per Area [W/m2] !TimeStep
+14,1,Environment,Site Solar Azimuth Angle [deg] !TimeStep
+15,1,Environment,Site Solar Altitude Angle [deg] !TimeStep
+16,1,BLOCK1:OFFICEXSWX1F,Zone Total Internal Latent Gain Energy [J] !TimeStep
+17,1,BLOCK1:OFFICEXSEX1F,Zone Total Internal Latent Gain Energy [J] !TimeStep
+18,1,BLOCK1:OFFICEXNWX1F,Zone Total Internal Latent Gain Energy [J] !TimeStep
+19,1,BLOCK1:OFFICEXNEX1F,Zone Total Internal Latent Gain Energy [J] !TimeStep
+20,1,BLOCK1:CORRIDORX1F,Zone Total Internal Latent Gain Energy [J] !TimeStep
+21,1,BLOCK2:OFFICEXSWX2F,Zone Total Internal Latent Gain Energy [J] !TimeStep
+22,1,BLOCK2:OFFICEXSEX2F,Zone Total Internal Latent Gain Energy [J] !TimeStep
+23,1,BLOCK2:OFFICEXNWX2F,Zone Total Internal Latent Gain Energy [J] !TimeStep
+24,1,BLOCK2:OFFICEXNEX2F,Zone Total Internal Latent Gain Energy [J] !TimeStep
+25,1,BLOCK2:CORRIDORX2F,Zone Total Internal Latent Gain Energy [J] !TimeStep
+26,1,BLOCK1:OFFICEXSWX1F,Zone People Sensible Heating Rate [W] !TimeStep
+27,1,BLOCK1:OFFICEXSEX1F,Zone People Sensible Heating Rate [W] !TimeStep
+28,1,BLOCK1:OFFICEXNWX1F,Zone People Sensible Heating Rate [W] !TimeStep
+29,1,BLOCK1:OFFICEXNEX1F,Zone People Sensible Heating Rate [W] !TimeStep
+30,1,BLOCK1:CORRIDORX1F,Zone People Sensible Heating Rate [W] !TimeStep
+31,1,BLOCK2:OFFICEXSWX2F,Zone People Sensible Heating Rate [W] !TimeStep
+32,1,BLOCK2:OFFICEXSEX2F,Zone People Sensible Heating Rate [W] !TimeStep
+33,1,BLOCK2:OFFICEXNWX2F,Zone People Sensible Heating Rate [W] !TimeStep
+34,1,BLOCK2:OFFICEXNEX2F,Zone People Sensible Heating Rate [W] !TimeStep
+35,1,BLOCK2:CORRIDORX2F,Zone People Sensible Heating Rate [W] !TimeStep
+706,1,BLOCK1:OFFICEXSWX1F EQUIPMENT GAIN,Other Equipment Electricity Rate [W] !TimeStep
+780,1,BLOCK1:OFFICEXSWX1F EQUIPMENT GAIN,Other Equipment Lost Heat Rate [W] !TimeStep
+781,1,BLOCK1:OFFICEXSWX1F EQUIPMENT GAIN,Other Equipment Total Heating Rate [W] !TimeStep
+782,1,BLOCK1:OFFICEXSEX1F EQUIPMENT GAIN,Other Equipment Electricity Rate [W] !TimeStep
+808,1,BLOCK1:OFFICEXSEX1F EQUIPMENT GAIN,Other Equipment Lost Heat Rate [W] !TimeStep
+809,1,BLOCK1:OFFICEXSEX1F EQUIPMENT GAIN,Other Equipment Total Heating Rate [W] !TimeStep
+810,1,BLOCK1:OFFICEXNWX1F EQUIPMENT GAIN,Other Equipment Electricity Rate [W] !TimeStep
+836,1,BLOCK1:OFFICEXNWX1F EQUIPMENT GAIN,Other Equipment Lost Heat Rate [W] !TimeStep
+837,1,BLOCK1:OFFICEXNWX1F EQUIPMENT GAIN,Other Equipment Total Heating Rate [W] !TimeStep
+838,1,BLOCK1:OFFICEXNEX1F EQUIPMENT GAIN,Other Equipment Electricity Rate [W] !TimeStep
+864,1,BLOCK1:OFFICEXNEX1F EQUIPMENT GAIN,Other Equipment Lost Heat Rate [W] !TimeStep
+865,1,BLOCK1:OFFICEXNEX1F EQUIPMENT GAIN,Other Equipment Total Heating Rate [W] !TimeStep
+866,1,BLOCK1:CORRIDORX1F EQUIPMENT GAIN,Other Equipment Electricity Rate [W] !TimeStep
+892,1,BLOCK1:CORRIDORX1F EQUIPMENT GAIN,Other Equipment Lost Heat Rate [W] !TimeStep
+893,1,BLOCK1:CORRIDORX1F EQUIPMENT GAIN,Other Equipment Total Heating Rate [W] !TimeStep
+894,1,BLOCK2:OFFICEXSWX2F EQUIPMENT GAIN,Other Equipment Electricity Rate [W] !TimeStep
+920,1,BLOCK2:OFFICEXSWX2F EQUIPMENT GAIN,Other Equipment Lost Heat Rate [W] !TimeStep
+921,1,BLOCK2:OFFICEXSWX2F EQUIPMENT GAIN,Other Equipment Total Heating Rate [W] !TimeStep
+922,1,BLOCK2:OFFICEXSEX2F EQUIPMENT GAIN,Other Equipment Electricity Rate [W] !TimeStep
+948,1,BLOCK2:OFFICEXSEX2F EQUIPMENT GAIN,Other Equipment Lost Heat Rate [W] !TimeStep
+949,1,BLOCK2:OFFICEXSEX2F EQUIPMENT GAIN,Other Equipment Total Heating Rate [W] !TimeStep
+950,1,BLOCK2:OFFICEXNWX2F EQUIPMENT GAIN,Other Equipment Electricity Rate [W] !TimeStep
+976,1,BLOCK2:OFFICEXNWX2F EQUIPMENT GAIN,Other Equipment Lost Heat Rate [W] !TimeStep
+977,1,BLOCK2:OFFICEXNWX2F EQUIPMENT GAIN,Other Equipment Total Heating Rate [W] !TimeStep
+978,1,BLOCK2:OFFICEXNEX2F EQUIPMENT GAIN,Other Equipment Electricity Rate [W] !TimeStep
+1004,1,BLOCK2:OFFICEXNEX2F EQUIPMENT GAIN,Other Equipment Lost Heat Rate [W] !TimeStep
+1005,1,BLOCK2:OFFICEXNEX2F EQUIPMENT GAIN,Other Equipment Total Heating Rate [W] !TimeStep
+1006,1,BLOCK2:CORRIDORX2F EQUIPMENT GAIN,Other Equipment Electricity Rate [W] !TimeStep
+1032,1,BLOCK2:CORRIDORX2F EQUIPMENT GAIN,Other Equipment Lost Heat Rate [W] !TimeStep
+1033,1,BLOCK2:CORRIDORX2F EQUIPMENT GAIN,Other Equipment Total Heating Rate [W] !TimeStep
+1034,1,BLOCK1:OFFICEXSWX1F,Zone Mean Radiant Temperature [C] !TimeStep,ON
+1035,1,BLOCK1:OFFICEXSEX1F,Zone Mean Radiant Temperature [C] !TimeStep,ON
+1036,1,BLOCK1:OFFICEXNWX1F,Zone Mean Radiant Temperature [C] !TimeStep,ON
+1037,1,BLOCK1:OFFICEXNEX1F,Zone Mean Radiant Temperature [C] !TimeStep,ON
+1038,1,BLOCK1:CORRIDORX1F,Zone Mean Radiant Temperature [C] !TimeStep,ON
+1039,1,BLOCK2:OFFICEXSWX2F,Zone Mean Radiant Temperature [C] !TimeStep,ON
+1040,1,BLOCK2:OFFICEXSEX2F,Zone Mean Radiant Temperature [C] !TimeStep,ON
+1041,1,BLOCK2:OFFICEXNWX2F,Zone Mean Radiant Temperature [C] !TimeStep,ON
+1042,1,BLOCK2:OFFICEXNEX2F,Zone Mean Radiant Temperature [C] !TimeStep,ON
+1043,1,BLOCK2:CORRIDORX2F,Zone Mean Radiant Temperature [C] !TimeStep,ON
+1044,1,BLOCK1:OFFICEXSWX1F,Zone Windows Total Transmitted Solar Radiation Rate [W] !TimeStep
+1045,1,BLOCK1:OFFICEXSWX1F,Zone Interior Windows Total Transmitted Beam Solar Radiation Rate [W] !TimeStep
+1046,1,BLOCK1:OFFICEXSWX1F,Zone Interior Windows Total Transmitted Diffuse Solar Radiation Rate [W] !TimeStep
+1047,1,BLOCK1:OFFICEXSEX1F,Zone Windows Total Transmitted Solar Radiation Rate [W] !TimeStep
+1048,1,BLOCK1:OFFICEXSEX1F,Zone Interior Windows Total Transmitted Beam Solar Radiation Rate [W] !TimeStep
+1049,1,BLOCK1:OFFICEXSEX1F,Zone Interior Windows Total Transmitted Diffuse Solar Radiation Rate [W] !TimeStep
+1050,1,BLOCK1:OFFICEXNWX1F,Zone Windows Total Transmitted Solar Radiation Rate [W] !TimeStep
+1051,1,BLOCK1:OFFICEXNWX1F,Zone Interior Windows Total Transmitted Beam Solar Radiation Rate [W] !TimeStep
+1052,1,BLOCK1:OFFICEXNWX1F,Zone Interior Windows Total Transmitted Diffuse Solar Radiation Rate [W] !TimeStep
+1053,1,BLOCK1:OFFICEXNEX1F,Zone Windows Total Transmitted Solar Radiation Rate [W] !TimeStep
+1054,1,BLOCK1:OFFICEXNEX1F,Zone Interior Windows Total Transmitted Beam Solar Radiation Rate [W] !TimeStep
+1055,1,BLOCK1:OFFICEXNEX1F,Zone Interior Windows Total Transmitted Diffuse Solar Radiation Rate [W] !TimeStep
+1056,1,BLOCK1:CORRIDORX1F,Zone Windows Total Transmitted Solar Radiation Rate [W] !TimeStep
+1057,1,BLOCK1:CORRIDORX1F,Zone Interior Windows Total Transmitted Beam Solar Radiation Rate [W] !TimeStep
+1058,1,BLOCK1:CORRIDORX1F,Zone Interior Windows Total Transmitted Diffuse Solar Radiation Rate [W] !TimeStep
+1059,1,BLOCK2:OFFICEXSWX2F,Zone Windows Total Transmitted Solar Radiation Rate [W] !TimeStep
+1060,1,BLOCK2:OFFICEXSWX2F,Zone Interior Windows Total Transmitted Beam Solar Radiation Rate [W] !TimeStep
+1061,1,BLOCK2:OFFICEXSWX2F,Zone Interior Windows Total Transmitted Diffuse Solar Radiation Rate [W] !TimeStep
+1062,1,BLOCK2:OFFICEXSEX2F,Zone Windows Total Transmitted Solar Radiation Rate [W] !TimeStep
+1063,1,BLOCK2:OFFICEXSEX2F,Zone Interior Windows Total Transmitted Beam Solar Radiation Rate [W] !TimeStep
+1064,1,BLOCK2:OFFICEXSEX2F,Zone Interior Windows Total Transmitted Diffuse Solar Radiation Rate [W] !TimeStep
+1065,1,BLOCK2:OFFICEXNWX2F,Zone Windows Total Transmitted Solar Radiation Rate [W] !TimeStep
+1066,1,BLOCK2:OFFICEXNWX2F,Zone Interior Windows Total Transmitted Beam Solar Radiation Rate [W] !TimeStep
+1067,1,BLOCK2:OFFICEXNWX2F,Zone Interior Windows Total Transmitted Diffuse Solar Radiation Rate [W] !TimeStep
+1068,1,BLOCK2:OFFICEXNEX2F,Zone Windows Total Transmitted Solar Radiation Rate [W] !TimeStep
+1069,1,BLOCK2:OFFICEXNEX2F,Zone Interior Windows Total Transmitted Beam Solar Radiation Rate [W] !TimeStep
+1070,1,BLOCK2:OFFICEXNEX2F,Zone Interior Windows Total Transmitted Diffuse Solar Radiation Rate [W] !TimeStep
+1071,1,BLOCK2:CORRIDORX2F,Zone Windows Total Transmitted Solar Radiation Rate [W] !TimeStep
+1072,1,BLOCK2:CORRIDORX2F,Zone Interior Windows Total Transmitted Beam Solar Radiation Rate [W] !TimeStep
+1073,1,BLOCK2:CORRIDORX2F,Zone Interior Windows Total Transmitted Diffuse Solar Radiation Rate [W] !TimeStep
